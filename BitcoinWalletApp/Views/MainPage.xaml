@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="BitcoinWalletApp.Views.MainPage"
+            BackgroundColor="White"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:views="clr-namespace:BitcoinWalletApp.Views" x:DataType="views:MainPage"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackground="#FAFAFA"
+            xmlns:local="clr-namespace:BitcoinWalletApp;assembly=BitcoinWalletApp"
+            NavigationPage.HasNavigationBar="False"
+            >
+    <TabbedPage.Children>
+        <ContentPage IconImageSource="home.xml" Title="Обзор">
+
+            <Label Text="{Binding pubKey[0]}" TextColor="#000" FontSize="Small"/>
+
+        </ContentPage>
+        <ContentPage  IconImageSource="send.xml" Title="Отправить"/>
+        <ContentPage  IconImageSource="change.xml" Title="Обмен"/>
+        <ContentPage  IconImageSource="receive.xml" Title="Получить"/>
+        <ContentPage  IconImageSource="transactions.xml" Title="Транзакции"/>
+    </TabbedPage.Children>
+    
+    
+</TabbedPage>
