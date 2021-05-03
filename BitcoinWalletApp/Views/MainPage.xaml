@@ -2,23 +2,29 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="BitcoinWalletApp.Views.MainPage"
-            BackgroundColor="White"
+            BackgroundColor="#003F63"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:views="clr-namespace:BitcoinWalletApp.Views" x:DataType="views:MainPage"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            BarBackground="#FAFAFA"
-            xmlns:local="clr-namespace:BitcoinWalletApp;assembly=BitcoinWalletApp"
+            BarBackground="#003F63"
+            xmlns:local="clr-namespace:BitcoinWalletApp.ViewModels"
             NavigationPage.HasNavigationBar="False"
             >
     <TabbedPage.Children>
-        <ContentPage IconImageSource="home.xml" Title="Обзор">
-
-            <Label Text="{Binding pubKey[0]}" TextColor="#000" FontSize="Small"/>
+        <ContentPage IconImageSource="home.xml" >
+                <Frame BackgroundColor="#F2B138"  CornerRadius="30" Margin="10">
+                <StackLayout>
+                    <Label x:Name="UserPubKey" TextColor="#fff" FontSize="Small"/>
+                    <Label x:Name="UserBalance" TextColor="#fff" FontSize="Small"/>
+                    <Image x:Name="UserQRCodeKey" />
+                </StackLayout>
+               
+                </Frame>
 
         </ContentPage>
-        <ContentPage  IconImageSource="send.xml" Title="Отправить"/>
-        <ContentPage  IconImageSource="change.xml" Title="Обмен"/>
-        <ContentPage  IconImageSource="receive.xml" Title="Получить"/>
-        <ContentPage  IconImageSource="transactions.xml" Title="Транзакции"/>
+        <ContentPage  IconImageSource="send.xml" />
+        <ContentPage  IconImageSource="change.xml" />
+        <ContentPage  IconImageSource="receive.xml"/>
+        <ContentPage  IconImageSource="transactions.xml" />
     </TabbedPage.Children>
     
     

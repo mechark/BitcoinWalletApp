@@ -13,6 +13,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\NBitc
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\BouncyCastle.Crypto.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QBitNinja.Client.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCoder.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SimpleBase.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SimpleBase.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SkiaSharp.dll
@@ -79,7 +80,10 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\zh-Ha
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Transactions.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCodeKeys.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\BitcoinWalletApp.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Transactions.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCodeKeys.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
@@ -91,7 +95,3 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\Bitco
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.csproj.CopyComplete
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.exe
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Transactions.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCodeKeys.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCodeKeys.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCoder.dll

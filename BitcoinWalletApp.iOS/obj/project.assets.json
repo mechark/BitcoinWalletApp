@@ -590,7 +590,7 @@
       },
       "BitcoinWalletApp/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Ipfs.Core": "0.55.0",
           "NBitcoin": "5.0.77",
@@ -1172,7 +1172,7 @@
       },
       "BitcoinWalletApp/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Ipfs.Core": "0.55.0",
           "NBitcoin": "5.0.77",
@@ -1757,7 +1757,7 @@
       },
       "BitcoinWalletApp/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Ipfs.Core": "0.55.0",
           "NBitcoin": "5.0.77",
@@ -2342,7 +2342,7 @@
       },
       "BitcoinWalletApp/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Ipfs.Core": "0.55.0",
           "NBitcoin": "5.0.77",

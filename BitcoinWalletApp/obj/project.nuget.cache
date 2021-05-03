@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bpduj+2ooaIu/eVDtzyHlq1ZgdZ+iTtbFm5Vy1Vi3dLwOnaRg81c12Ep+17V/0Q+7yiUoQmsXfhW0M+o1vRk6Q==",
+  "dgSpecHash": "cziiDT4UjZTpKtpSWOJ+gt3vj3lwQIU4qiqnQVh0njrb/pHyZuTMUKqcirfhx7yZ3boi9C0c00rEacXNFZJh1A==",
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,6 @@
     "C:\\Users\\forru\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\nbitcoin\\5.0.77\\nbitcoin.5.0.77.nupkg.sha512",
-    "C:\\Users\\forru\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\portable.bouncycastle\\1.8.5\\portable.bouncycastle.1.8.5.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\qbitninja.client\\1.0.3.52\\qbitninja.client.1.0.3.52.nupkg.sha512",
@@ -37,7 +36,7 @@
     "C:\\Users\\forru\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\skiasharp.svg\\1.60.0\\skiasharp.svg.1.60.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\skiasharp.views.forms\\2.80.2\\skiasharp.views.forms.2.80.2.nupkg.sha512",
-    "C:\\Users\\forru\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",

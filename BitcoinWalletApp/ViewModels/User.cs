@@ -11,11 +11,7 @@ namespace BitcoinWalletApp.ViewModels
     public class User
     {
         // Properties
-        protected UserInfo userInfo
-        {
-            get => new UserInfo(pubKey);
-            set => new UserInfo(pubKey);
-        }
+        protected UserInfo userInfo { get => new UserInfo(pubKey); }
 
         public string pubKey { 
             get => (string)App.Current.Properties["pubKey"];
@@ -39,11 +35,6 @@ namespace BitcoinWalletApp.ViewModels
             }
         }
 
-        public decimal GetBalance
-        {
-            get => userInfo.GetUserBalance(Network.Main, MoneyUnit.Satoshi);
-        }
-
         public DateTime GetDateTimeLastTransaction
         {
             get => userInfo.GetUserRecentTransactionDateTime;
@@ -61,5 +52,11 @@ namespace BitcoinWalletApp.ViewModels
 
             return ImageSource.FromStream(() => new MemoryStream(keyQRCodeBytes));
         }
+        // Delegates?
+        public decimal GetBalance(Network networkType, MoneyUnit moneyUnit)
+        {
+            return userInfo.GetUserBalance(networkType, moneyUnit);
+        }
+
     }
 }

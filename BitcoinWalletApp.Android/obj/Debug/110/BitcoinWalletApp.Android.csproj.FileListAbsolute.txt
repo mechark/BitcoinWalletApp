@@ -7,7 +7,10 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\com.comp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\com.companyname.bitcoinwalletapp-Signed.apk.idsig
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\Transactions.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\QRCodeKeys.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\BitcoinWalletApp.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\Transactions.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\QRCodeKeys.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\build.props
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\adb.props
@@ -60,6 +63,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\drawable\home.xml
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\drawable\receive.xml
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\drawable\transactions.xml
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\drawable\home.png
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\uploadflags.txt
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\resolvedassemblies.hash
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\BitcoinWalletApp.Android.dll
@@ -101,6 +105,9 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\netstandard.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QBitNinja.Client.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKeys.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKeys.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCoder.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SimpleBase.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SimpleBase.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SkiaSharp.dll
@@ -311,6 +318,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc6414fa209700c2b9f3\CachedImageFastRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc6414fa209700c2b9f3\CachedImageRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc6414fa209700c2b9f3\CachedImageView.java
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc6419aca8a2a71a7cbe\MyTabbedPageRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64396a3fe5f8138e3f\CustomTabsServiceConnectionImpl.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64396a3fe5f8138e3f\KeepAliveService.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc643f46942d9dd1fff9\ActionSheetRenderer.java
@@ -662,11 +670,3 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stam
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\Transactions.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\res\drawable\home.png
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc6419aca8a2a71a7cbe\MyTabbedPageRenderer.java
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKeys.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKeys.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCoder.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\QRCodeKeys.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\bin\Debug\QRCodeKeys.pdb
