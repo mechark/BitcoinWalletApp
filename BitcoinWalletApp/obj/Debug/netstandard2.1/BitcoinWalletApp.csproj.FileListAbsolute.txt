@@ -3,19 +3,18 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\B
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\ref\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\BitcoinWalletApp.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Mono.Android.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\QRCodeKeys.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\QRCodeKey.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Transactions.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Forms.Platform.Android.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Google.Android.Material.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\FormsViewGroup.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Mono.Android.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Mono.Android.xml
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\QRCodeKeys.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\QRCodeKey.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Transactions.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Forms.Platform.Android.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Google.Android.Material.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\FormsViewGroup.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.csprojAssemblyReference.cache
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\App.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\MainPage.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\StartPage.xaml.g.cs
@@ -27,3 +26,4 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\B
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\ref\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.csprojAssemblyReference.cache

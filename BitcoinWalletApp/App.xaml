@@ -6,24 +6,16 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            
-            <Style x:Key="button" TargetType="Button">
-                <Setter Property="Margin" Value="0,20,0,0"/>
-                <Setter Property="Padding" Value="30,15"/>
-                <Setter Property="TextColor" Value="#fff"/>
-                <Setter Property="FontSize" Value="Medium"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="CornerRadius" Value="30"/>
-                <Setter Property="BorderColor" Value="#fff"/>
-                <Setter Property="BorderWidth" Value=".1"/>
-            </Style>
-            
+
             <Style x:Key="header" TargetType="Label">
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="FontSize" Value="38"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="TextColor" Value="#fff"/>
+                <Setter Property="FontFamily" Value="Opes Sans" />
+                <Setter Property="TextColor" Value="#000" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="caption" TargetType="Label" >
+                <Setter Property="FontFamily" Value="Open Sans" />
+                <Setter Property="TextColor" Value="#000" />
             </Style>
             
         </ResourceDictionary>

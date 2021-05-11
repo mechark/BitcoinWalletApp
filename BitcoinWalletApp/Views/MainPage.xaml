@@ -8,24 +8,58 @@
             BarBackground="#003F63"
             xmlns:local="clr-namespace:BitcoinWalletApp.ViewModels"
             NavigationPage.HasNavigationBar="False"
+            android:ImageButton.IsShadowEnabled="False"
             >
     <TabbedPage.Children>
         <ContentPage IconImageSource="home.xml" >
-                <Frame BackgroundColor="#F2B138"  CornerRadius="30" Margin="10">
-                <StackLayout>
-                    <Label x:Name="UserPubKey" TextColor="#fff" FontSize="Small"/>
-                    <Label x:Name="UserBalance" TextColor="#fff" FontSize="Small"/>
-                    <Image x:Name="UserQRCodeKey" />
-                </StackLayout>
-               
-                </Frame>
-
+            <ContentPage.Content>
+                <FlexLayout>
+                    
+                    <Frame BackgroundColor="#fff" CornerRadius="30" Margin="0 , 45, 0, 0" x:Name="WhiteFrame">
+                        <Grid x:Name="UserInfo">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height=".15*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" /> 
+                                <ColumnDefinition Width="2.5*" /> 
+                            </Grid.ColumnDefinitions>
+                            <StackLayout x:Name="UserInfo__QRCode" Margin=" 0, 0, 10, 0" Grid.Column="0" Grid.Row="0">
+                                <Image x:Name="UserQRCodeKey" WidthRequest="160" />
+                            </StackLayout>
+                            <StackLayout x:Name="UserInfo__StateOfWallet" Margin="0, 10, 0, 0" Grid.Column="1" Grid.Row="0" >
+                                <Label x:Name="UserPubKey" Style="{StaticResource caption}" FontSize="12" HorizontalOptions="Center" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding CopyAddressCommand}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <FlexLayout JustifyContent="SpaceBetween" >
+                                    <Label Text="Всего:" Style="{StaticResource header}" FontSize="Medium"/>
+                                    <Label x:Name="UserBalance" Style="{StaticResource caption}" FontSize="Medium" />
+                                </FlexLayout>
+                            </StackLayout>
+                            <StackLayout x:Name="UserRecentTransactions" Grid.Row="1" Grid.ColumnSpan="2" >
+                                <Frame BackgroundColor="#fff" HeightRequest="300">
+                                    <StackLayout>
+                                        <Label Text="Недавние транзакции:" Style="{StaticResource header}" FontSize="18" Grid.Column="0" Grid.Row="1" />
+                                        <FlexLayout JustifyContent="SpaceBetween">
+                                            <StackLayout x:Name="TypeAndAmountOfTransaction"></StackLayout>
+                                            <StackLayout x:Name="DateOfTransaction" ></StackLayout>
+                                        </FlexLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </FlexLayout>
+            </ContentPage.Content>
         </ContentPage>
         <ContentPage  IconImageSource="send.xml" />
         <ContentPage  IconImageSource="change.xml" />
         <ContentPage  IconImageSource="receive.xml"/>
         <ContentPage  IconImageSource="transactions.xml" />
     </TabbedPage.Children>
-    
-    
+
+
 </TabbedPage>

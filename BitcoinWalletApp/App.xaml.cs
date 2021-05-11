@@ -20,8 +20,8 @@ namespace BitcoinWalletApp
             if (!properties.ContainsKey("pubKey"))
             {
                 CreateWallet wallet = new CreateWallet();
-                properties.Add("pubKey", wallet.CreateKeysToUser(Network.Main)["pubKey"]);
-                properties.Add("privKey", wallet.CreateKeysToUser(Network.Main)["privKey"]);
+                properties.Add("pubKey", wallet.CreateKeys(Network.Main)["pubKey"]);
+                properties.Add("privKey", wallet.CreateKeys(Network.Main)["privKey"]);
             }
 
             MainPage = new NavigationPage(new MainPage());
