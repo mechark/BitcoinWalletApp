@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "eWSFpJNd4IigdqRSHnsyx1vD970f4MHnPy/kFbwWOrAkg07kciBNezDgjyCYqT2s/SXjimk/2/bizy1ARB/K7g==",
+=======
+  "dgSpecHash": "r8GMGik2wFTDy8H4WX9Bl9sLnZ4RLAnhAg04AMOV8yT3M87nubYTRpHd3TnUbchxQ/0MseErEo3egaE7iX4BSA==",
+>>>>>>> e8a2ab288bb3200319a4cfbf00225d39f92676f8
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.Android\\BitcoinWalletApp.Android.csproj",
   "expectedPackageFiles": [
