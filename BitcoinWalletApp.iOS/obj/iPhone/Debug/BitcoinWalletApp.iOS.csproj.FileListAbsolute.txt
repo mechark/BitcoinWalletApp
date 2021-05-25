@@ -15,6 +15,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Newto
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\BouncyCastle.Crypto.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QBitNinja.Client.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCoder.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\RestSharp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SimpleBase.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SimpleBase.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\SkiaSharp.dll
@@ -96,4 +97,6 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\Bitco
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.csproj.CopyComplete
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.exe
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\obj\iPhone\Debug\BitcoinWalletApp.iOS.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\RestSharp.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Mono.Android.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Mono.Android.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Mono.Android.xml

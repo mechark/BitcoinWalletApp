@@ -109,6 +109,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKey.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCodeKey.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\QRCoder.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\RestSharp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SimpleBase.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SimpleBase.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\SkiaSharp.dll
@@ -514,6 +515,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc644bcdcf6d99873ace\FFAnimatedDrawable.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc644bcdcf6d99873ace\FFBitmapDrawable.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc644bcdcf6d99873ace\SelfDisposingBitmapDrawable.java
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc646e2b90d7802dca31\BorderlessPickerRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64720bb2db43a66fe9\ButtonRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64720bb2db43a66fe9\CarouselPageRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64720bb2db43a66fe9\FormsFragmentPagerAdapter_1.java
@@ -670,4 +672,3 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stam
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\RestSharp.dll

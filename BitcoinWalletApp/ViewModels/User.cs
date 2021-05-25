@@ -10,11 +10,14 @@ namespace BitcoinWalletApp.ViewModels
 {
     public class User
     {
-
+        public User ()
+        {
+            
+        }
 
         // Properties
 
-        protected UserInfo UserInfo { get => new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn"); }
+        protected UserInfo UserInfo { get => new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn", true); }
 
         public string PubKey { get => (string)App.Current.Properties["pubKey"]; }
 
@@ -24,9 +27,18 @@ namespace BitcoinWalletApp.ViewModels
 
         public int TransactionsCount { get => (int)UserInfo.TransactionsCount; }
 
-        public List<string> TransactionDateTime { get => UserInfo.GetUserRecentTransactionsDateTime(); }
+        public decimal Balance { get => Convert.ToDecimal(App.Current.Properties["UserBalance"]); }
 
-        public string TransactionType { get => UserInfo.GetTypeOfTransaction(); }
+        // Transactions *******************
+
+        public string [] AmountOfTransactions { get => App.Current.Properties["UserTransactionsSum"].ToString().Split(); }
+
+        public string [] TransactionsType { get => App.Current.Properties["UserTransactionType"].ToString().Split(); }
+
+        public string [] TransactionDateTime { get => App.Current.Properties["UserTransactionsTime"].ToString().Split(); }
+
+        // Transactions *******************
+
 
         // Methods
 
@@ -35,17 +47,6 @@ namespace BitcoinWalletApp.ViewModels
             byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(PubKey);
 
             return ImageSource.FromStream(() => new MemoryStream(keyQRCodeBytes));
-        }
-
-        public decimal AmountLastTransaction(MoneyUnit moneyUnit)
-        {
-            return UserInfo.GetUserRecentTransactionsAmount(moneyUnit);
         }  
-
-        public decimal GetBalance(MoneyUnit moneyUnit)
-        {
-            return UserInfo.GetUserBalance(moneyUnit);
-        }
-
     }
 }

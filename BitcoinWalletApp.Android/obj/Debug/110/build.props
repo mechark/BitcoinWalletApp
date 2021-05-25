@@ -9,7 +9,7 @@ androidlinktool=
 androidpackageformat=apk
 embedassembliesintoapk=false
 androidlinkmode=none
-androidlinkskip=
+androidlinkskip=newtonsoft.json
 androidsdkbuildtoolsversion=30.0.2
 androidsdkpath=c:\program files (x86)\android\android-sdk\
 androidndkpath=
@@ -24,7 +24,7 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=637563691292259286
+_nugetassetstimestamp=637573998015579932
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a

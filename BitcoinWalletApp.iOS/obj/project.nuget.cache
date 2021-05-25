@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "EEldecV6SBSs2VoC3kliwx92kvRnKcd4/QVIBHRh8YmgGg2HKeklm/91ZfUzkjW8T1i3a0Ef7ESPzJ9kI/Oorg==",
-=======
-  "dgSpecHash": "wOOBn0PWNMj0M1eN9Ix+lCQupTCaBMPLdzlrPz1LiKHS8FQcVIRHLUhJMhjFd5tjRbDs17s4eTDtKXMh34Uxkw==",
->>>>>>> e8a2ab288bb3200319a4cfbf00225d39f92676f8
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.iOS\\BitcoinWalletApp.iOS.csproj",
   "expectedPackageFiles": [

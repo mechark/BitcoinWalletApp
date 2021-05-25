@@ -13,52 +13,57 @@
     <TabbedPage.Children>
         <ContentPage IconImageSource="home.xml" >
             <ContentPage.Content>
-                <FlexLayout>
-                    
-                    <Frame BackgroundColor="#fff" CornerRadius="30" Margin="0 , 45, 0, 0" x:Name="WhiteFrame">
-                        <Grid x:Name="UserInfo">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height=".15*" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" /> 
-                                <ColumnDefinition Width="2.5*" /> 
-                            </Grid.ColumnDefinitions>
-                            <StackLayout x:Name="UserInfo__QRCode" Margin=" 0, 0, 10, 0" Grid.Column="0" Grid.Row="0">
-                                <Image x:Name="UserQRCodeKey" WidthRequest="160" />
-                            </StackLayout>
-                            <StackLayout x:Name="UserInfo__StateOfWallet" Margin="0, 10, 0, 0" Grid.Column="1" Grid.Row="0" >
-                                <Label x:Name="UserPubKey" Style="{StaticResource caption}" FontSize="12" HorizontalOptions="Center" >
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding CopyAddressCommand}" />
-                                    </Label.GestureRecognizers>
-                                </Label>
-                                <FlexLayout JustifyContent="SpaceBetween" >
-                                    <Label Text="Всего:" Style="{StaticResource header}" FontSize="Medium"/>
-                                    <Label x:Name="UserBalance" Style="{StaticResource caption}" FontSize="Medium" />
-                                </FlexLayout>
-                            </StackLayout>
-                            <StackLayout x:Name="UserRecentTransactions" Grid.Row="1" Grid.ColumnSpan="2" >
-                                <Frame BackgroundColor="#fff" HeightRequest="300">
+                <StackLayout>
+                    <FlexLayout Direction="Row" JustifyContent="SpaceBetween" >
+                        <Button Text="Обновить" TextColor="#fff" BackgroundColor="#003F63" Clicked="Refresh_Clicked"/>
+                        <Button Text="BTC" BackgroundColor="#003F63" Clicked="ChangeCoin_Clicked" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None"/>
+                    </FlexLayout>
+                    <FlexLayout Direction="Column">
+                        <Frame BackgroundColor="#fff" CornerRadius="30" x:Name="MainFrame">
+                            <FlexLayout Direction="Column">
+                                <StackLayout x:Name="UserInfo__QRCode" >
+                                    <Image x:Name="UserQRCodeKey" />
+                                </StackLayout>
+                                <StackLayout x:Name="UserInfo__StateOfWallet">
+                                    <Label x:Name="UserPubKey" Style="{StaticResource caption}" HorizontalOptions="Center" FontSize="Default">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding CopyAddressCommand}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <FlexLayout JustifyContent="SpaceBetween" Margin="0, 0, 0 , 10">
+                                        <Label Text="Всего:" Style="{StaticResource header}" FontSize="Medium"/>
+                                        <Label x:Name="UserBalance" Style="{StaticResource caption}" FontSize="Medium"/>
+                                    </FlexLayout>
                                     <StackLayout>
-                                        <Label Text="Недавние транзакции:" Style="{StaticResource header}" FontSize="18" Grid.Column="0" Grid.Row="1" />
-                                        <FlexLayout JustifyContent="SpaceBetween">
-                                            <StackLayout x:Name="TypeAndAmountOfTransaction"></StackLayout>
-                                            <StackLayout x:Name="DateOfTransaction" ></StackLayout>
-                                        </FlexLayout>
+                                        <Button Text="Мои адреса" Clicked="MyAddresses_Clicked" Style="{StaticResource button}" x:Name="MyAddresses"/>
                                     </StackLayout>
-                                </Frame>
-                            </StackLayout>
-                        </Grid>
-                    </Frame>
-                </FlexLayout>
+                                </StackLayout>
+                                <ScrollView x:Name="UserRecentTransactions" Margin="0, 20, 0, 0">
+                                    <Frame BackgroundColor="#353D40" CornerRadius="10">
+                                        <StackLayout >
+                                            <FlexLayout JustifyContent="SpaceBetween">
+                                                <Label Text="Недавние транзакции" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium"/>
+                                                <Label Text="Все" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding AllTransactionsShowCommand}" />
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+                                            </FlexLayout>
+                                            <FlexLayout JustifyContent="SpaceBetween" >
+                                                <StackLayout x:Name="TypeAndAmountOfTransaction"></StackLayout>
+                                                <StackLayout x:Name="DateOfTransaction" ></StackLayout>
+                                            </FlexLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ScrollView>
+                            </FlexLayout>
+                        </Frame>
+                    </FlexLayout>
+                </StackLayout>
             </ContentPage.Content>
         </ContentPage>
         <ContentPage  IconImageSource="send.xml" />
         <ContentPage  IconImageSource="change.xml" />
-        <ContentPage  IconImageSource="receive.xml"/>
-        <ContentPage  IconImageSource="transactions.xml" />
     </TabbedPage.Children>
 
 

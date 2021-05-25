@@ -11,31 +11,49 @@ using System.Windows;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Essentials;
 using System.Windows.Input;
-using Info.Blockchain.API.BlockExplorer;
-using Info.Blockchain.API.Models;
+using System.Net.NetworkInformation;
+using System.Globalization;
 
 namespace BitcoinWalletApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : TabbedPage
     {
-        public static User User { get => new User(); }
+        protected static User User { get => new User(); }
+
+        protected double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
+
+        protected double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
+
+        protected Label AmountOfTransaction { get; set; }
+
         public ICommand CopyAddressCommand => new Command(Copy_Clicked);
+
+        public ICommand AllTransactionsShowCommand => new Command(AllTransactionsShow);
 
         public MainPage()
         {
             InitializeComponent();
-            UserInitialize(MoneyUnit.Satoshi);
+            UserInitialize(MoneyUnit.BTC);
+            SizeChanged += PageSizeChange;
 
             this.BindingContext = this;
+        }
+
+        void PageSizeChange (object sender, EventArgs e)
+        {
+            UserQRCodeKey.WidthRequest = DisplayWidth / 2.35;
+            MainFrame.HeightRequest = DisplayHeight / 1;
+            UserPubKey.FontSize = DisplayHeight / 146.25;
+            MyAddresses.Padding = DisplayHeight / 156;
         }
 
         //Methods
         public void UserInitialize(MoneyUnit moneyUnit)
         {
             UserPubKey.Text = User.PubKey;
-            UserBalance.Text = User.GetBalance(moneyUnit).ToString() + " " + moneyUnit.ToString();
             UserQRCodeKey.Source = User.GetQRKey();
+            UserBalance.Text = User.Balance.ToString() + " " + moneyUnit.ToString();
 
             if (User.HasTransactions)
             {
@@ -50,56 +68,130 @@ namespace BitcoinWalletApp.Views
                 for (int transaction = 0; transaction < transactionsCount; transaction++)
                 {
 
-                    Label AmountOfTransaction = new Label
+                    FlexLayout layout = new FlexLayout
                     {
-                        Text = User.AmountLastTransaction(moneyUnit).ToString() + " " + moneyUnit.ToString(),
-                        TextColor = Color.Black,
+                        Direction = FlexDirection.Row,
+                        JustifyContent = FlexJustify.SpaceBetween
+                    };
+
+                    AmountOfTransaction = new Label
+                    {
+                        Text = User.AmountOfTransactions[transaction] + " " + moneyUnit.ToString(),
+                        TextColor = Color.White,
+                        FontSize = DisplayHeight / 167.1428571428571,
+                        VerticalTextAlignment = TextAlignment.Center
                     };
 
                     Label TypeOfTransaction = new Label
                     {
-                        Text = User.TransactionType,
-                        TextColor = Color.Black,
-                        HorizontalOptions = LayoutOptions.Center
+                        Text = User.TransactionsType[transaction],
+                        TextColor = Color.White,
+                        HorizontalOptions = LayoutOptions.Center,
+                        FontSize = DisplayHeight / 167.1428571428571
                     };
+
+                    if (User.TransactionsType[transaction] == "Получено")
+                    {
+                        TypeOfTransaction.TextColor = Color.FromHex("#00CC00");
+                    }
+                    else if (User.TransactionsType[transaction] == "Отправлено")
+                    {
+                        TypeOfTransaction.TextColor = Color.FromHex("#CC0000");
+                    }
 
                     Label DateTimeOfTransaction = new Label
                     {
                         Text = User.TransactionDateTime[transaction],
-                        TextColor = Color.Black,
-                        VerticalOptions = LayoutOptions.Center
+                        TextColor = Color.White,
+                        VerticalOptions = LayoutOptions.Center,
+                        FontSize = DisplayHeight / 167.1428571428571
                     };
 
-                    TypeAndAmountOfTransaction.Children.Add(AmountOfTransaction);
-                    TypeAndAmountOfTransaction.Children.Add(TypeOfTransaction);
-                    DateOfTransaction.Children.Add(DateTimeOfTransaction);
+                    TypeAndAmountOfTransaction.Children.Add(layout);
+
+                    layout.Children.Add(AmountOfTransaction);
+                    layout.Children.Add(TypeOfTransaction);
+                    layout.Children.Add(DateTimeOfTransaction);
                 }
             }
             else
             {
                 Label noTransactions = new Label
                 {
-                    Text = User.TransactionType,
+                    Text = User.TransactionsType[0],
                     TextColor = Color.Black
                 };
 
                 Grid.SetColumn(noTransactions, 1);
                 TypeAndAmountOfTransaction.Children.Add(noTransactions);
             }
-        } 
+        }
+
+
+        private void Refresh_Clicked(object sender, EventArgs e)
+        {
+            // Понять работает ли обновление страницы только при обновлении данных или нет
+            UserInfo UserInfo = new UserInfo(User.PubKey);
+            App.Current.Properties["UserBalance"] = UserInfo.GetUserBalance(MoneyUnit.BTC);
+
+            if (User.HasTransactions)
+            {
+                UserInfo UserInfoWithTransactoins = new UserInfo(User.PubKey, true);
+
+                App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
+                App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
+                App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
+
+                App.Current.Properties["IsFilled"] = true;
+            }
+        }
+
+        private async void ChangeCoin_Clicked(object sender, EventArgs e)
+        {
+            var change = await DisplayActionSheet(null, null, null, "BTC", "Sat", "mBTC");
+            ChangeCoin.Text = change;
+
+            if (change == "BTC")
+            {
+                UserBalance.Text = User.Balance.ToString() + " " + change;
+
+            }
+            else if (change == "Sat")
+            {
+                UserBalance.Text = (User.Balance * 100000).ToString() + " " + change;
+            }
+            else if (change == "mBTC")
+            {
+                UserBalance.Text = (User.Balance * 1000).ToString() + " " + change;
+            }
+            else
+            {
+                ChangeCoin.Text = "BTC";
+                UserBalance.Text = User.Balance.ToString() + " " + change;
+            }
+        }
+
+        private void MyAddresses_Clicked (object sender, EventArgs e)
+        {
+            
+        }
 
         private void Copy_Clicked()
         {
-            if (!Clipboard.HasText)
+            if (Clipboard.GetTextAsync().ToString() != User.PubKey)
             {
+                UserPubKey.Text = "Скопировано";
                 Clipboard.SetTextAsync(User.PubKey);
 
-                UserPubKey.Text = "Скопировано";
-                Thread.Sleep(10000);
                 UserPubKey.Text = User.PubKey;
             }
-
         }
+
+        private void AllTransactionsShow()
+        {
+            Navigation.PushAsync(new TransactionsInfo());
+        }
+
 
     }
 }
