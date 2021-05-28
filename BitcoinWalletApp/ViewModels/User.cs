@@ -17,7 +17,7 @@ namespace BitcoinWalletApp.ViewModels
 
         // Properties
 
-        protected UserInfo UserInfo { get => new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn", true); }
+        protected UserInfo UserInfo { get => new UserInfo(PubKey); }
 
         public string PubKey { get => (string)App.Current.Properties["pubKey"]; }
 
@@ -27,7 +27,7 @@ namespace BitcoinWalletApp.ViewModels
 
         public int TransactionsCount { get => (int)UserInfo.TransactionsCount; }
 
-        public decimal Balance { get => Convert.ToDecimal(App.Current.Properties["UserBalance"]); }
+        public int Balance { get => Convert.ToInt32(App.Current.Properties["UserBalance"]); }
 
         // Transactions *******************
 

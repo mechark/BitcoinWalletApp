@@ -1,7 +1,10 @@
+BitcoinWalletApp.dll
 FFImageLoading.Forms.Platform.dll
 FFImageLoading.Platform.dll
 FFImageLoading.Svg.Platform.dll
 FormsViewGroup.dll
+Plugin.Media.dll
+Rg.Plugins.Popup.dll
 SkiaSharp.dll
 SkiaSharp.Views.Android.dll
 SkiaSharp.Views.Forms.dll
@@ -92,4 +95,3 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
-BitcoinWalletApp.dll

@@ -34,6 +34,15 @@ ffimageloading.cache.LRUCache;crc64b75d9ddab39d6c30.LRUCache
 FFImageLoading.Cross.MvxSvgCachedImageView, FFImageLoading.Svg.Platform;ffimageloading.cross.MvxSvgCachedImageView
 FFImageLoading.Cross.MvxSvgCachedImageView;ffimageloading.cross.MvxSvgCachedImageView
 ffimageloading.cross.MvxSvgCachedImageView;ffimageloading.cross.MvxSvgCachedImageView
+Plugin.Media.MediaPickerActivity, Plugin.Media;crc646957603ea1820544.MediaPickerActivity
+Plugin.Media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
+plugin.media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer, Rg.Plugins.Popup;crc643dd37f507f3d9710.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer;crc643dd37f507f3d9710.PopupPageRenderer
+rg.plugins.popup.droid.renderers.PopupPageRenderer;crc643dd37f507f3d9710.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup;crc64fdbeeba101bd56dc.RgGestureDetectorListener
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener;crc64fdbeeba101bd56dc.RgGestureDetectorListener
+rg.plugins.popup.droid.gestures.RgGestureDetectorListener;crc64fdbeeba101bd56dc.RgGestureDetectorListener
 SkiaSharp.Views.Android.GLTextureView, SkiaSharp.Views.Android;crc648e35430423bd4943.GLTextureView
 SkiaSharp.Views.Android.GLTextureView;crc648e35430423bd4943.GLTextureView
 skiasharp.views.android.GLTextureView;crc648e35430423bd4943.GLTextureView

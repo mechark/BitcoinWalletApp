@@ -22,7 +22,11 @@
                         <Frame BackgroundColor="#fff" CornerRadius="30" x:Name="MainFrame">
                             <FlexLayout Direction="Column">
                                 <StackLayout x:Name="UserInfo__QRCode" >
-                                    <Image x:Name="UserQRCodeKey" />
+                                    <Image x:Name="UserQRCodeKey">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding DownloadQRCode}" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
                                 </StackLayout>
                                 <StackLayout x:Name="UserInfo__StateOfWallet">
                                     <Label x:Name="UserPubKey" Style="{StaticResource caption}" HorizontalOptions="Center" FontSize="Default">
@@ -32,7 +36,7 @@
                                     </Label>
                                     <FlexLayout JustifyContent="SpaceBetween" Margin="0, 0, 0 , 10">
                                         <Label Text="Всего:" Style="{StaticResource header}" FontSize="Medium"/>
-                                        <Label x:Name="UserBalance" Style="{StaticResource caption}" FontSize="Medium"/>
+                                        <Label x:Name="UserBalance" Style="{StaticResource header}" FontSize="Medium"/>
                                     </FlexLayout>
                                     <StackLayout>
                                         <Button Text="Мои адреса" Clicked="MyAddresses_Clicked" Style="{StaticResource button}" x:Name="MyAddresses"/>

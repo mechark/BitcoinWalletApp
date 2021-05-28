@@ -6,21 +6,19 @@ using Transactions;
 using Xamarin.Forms.Xaml;
 using BitcoinWalletApp.ViewModels;
 using System.Collections.Generic;
+using Android.Preferences;
+using Xamarin.Essentials;
 
 namespace BitcoinWalletApp
 {
     public partial class App : Application
     {
-        User User { get => new User(); }
-
+        protected User User { get => new User(); }
         public App()
         {
             InitializeComponent();
-
-            if (!App.Current.Properties.ContainsKey("UserBalance"))
-            {
-                OnStart();
-            }
+            VersionTracking.Track();
+            OnStart();
 
             MainPage = new NavigationPage(new MainPage());
 
@@ -28,14 +26,15 @@ namespace BitcoinWalletApp
 
         protected override void OnStart()
         {
-            CreateWallet wallet = new CreateWallet();
+     //       if (VersionTracking.IsFirstLaunchEver)
+    //        {
+                CreateWallet wallet = new CreateWallet();
 
-            App.Current.Properties["pubKey"] = wallet.CreateKeys(Network.Main)["pubKey"];
-            App.Current.Properties["privKey"] = wallet.CreateKeys(Network.Main)["privKey"];
+                App.Current.Properties["pubKey"] = wallet.CreateKeys(Network.Main)["pubKey"];
+                App.Current.Properties["privKey"] = wallet.CreateKeys(Network.Main)["privKey"];
 
-            UserInfo userInfo = new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn");
-            App.Current.Properties["UserBalance"] = userInfo.GetUserBalance(MoneyUnit.BTC);
-
+                App.Current.Properties["UserBalance"] = 0;
+       //     }
             // Только для тестирования. Должно быть удалено.
             if (User.HasTransactions)
             {
@@ -44,8 +43,6 @@ namespace BitcoinWalletApp
                 App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
                 App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
                 App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
-
-                App.Current.Properties["IsFilled"] = true;
             } 
         }
 

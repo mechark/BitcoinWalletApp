@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7o1vE2LkwBRnN8k/4RaAlPyL2o6rFWpY2jTOBhBFlclgxCf0IubgCfKQjPQ5Oz40GIDiRunseJo52Y51I4BiXg==",
+  "dgSpecHash": "X8Aa1EbZhsjdsSmkZEvtHjDMhyQL3L0OCTG+CvEXJuai5zMJ7eLbjB9eid62dH5sAiDxds/hLdKiZoo8bwqvxQ==",
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\forru\\.nuget\\packages\\qbitninja.client\\1.0.3.52\\qbitninja.client.1.0.3.52.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\rg.plugins.popup\\2.0.0.11\\rg.plugins.popup.2.0.0.11.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

@@ -12,7 +12,10 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Essentials;
 using System.Windows.Input;
 using System.Net.NetworkInformation;
+using System.IO;
 using System.Globalization;
+using Rg.Plugins.Popup.Extensions;
+using Drawing = System.Drawing;
 
 namespace BitcoinWalletApp.Views
 {
@@ -30,6 +33,8 @@ namespace BitcoinWalletApp.Views
         public ICommand CopyAddressCommand => new Command(Copy_Clicked);
 
         public ICommand AllTransactionsShowCommand => new Command(AllTransactionsShow);
+
+        public ICommand DownloadQRCode => new Command(SaveQRImage);
 
         public MainPage()
         {
@@ -154,7 +159,6 @@ namespace BitcoinWalletApp.Views
             if (change == "BTC")
             {
                 UserBalance.Text = User.Balance.ToString() + " " + change;
-
             }
             else if (change == "Sat")
             {
@@ -167,8 +171,19 @@ namespace BitcoinWalletApp.Views
             else
             {
                 ChangeCoin.Text = "BTC";
-                UserBalance.Text = User.Balance.ToString() + " " + change;
+                UserBalance.Text = User.Balance.ToString() + "BTC";
             }
+
+
+
+        }
+
+        private void SaveQRImage()
+        {
+            byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(User.PubKey);
+
+            DependencyService.Get<IMediaSave>().SavePicture(keyQRCodeBytes, "PublicKey" + User.PubKey);
+            Navigation.PushPopupAsync(new DownloadQRImagePopup());
         }
 
         private void MyAddresses_Clicked (object sender, EventArgs e)
@@ -180,10 +195,9 @@ namespace BitcoinWalletApp.Views
         {
             if (Clipboard.GetTextAsync().ToString() != User.PubKey)
             {
-                UserPubKey.Text = "Скопировано";
                 Clipboard.SetTextAsync(User.PubKey);
-
-                UserPubKey.Text = User.PubKey;
+                Navigation.PushPopupAsync(new CopyPopup());
+                Navigation.PopPopupAsync(true);
             }
         }
 

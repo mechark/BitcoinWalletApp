@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eWSFpJNd4IigdqRSHnsyx1vD970f4MHnPy/kFbwWOrAkg07kciBNezDgjyCYqT2s/SXjimk/2/bizy1ARB/K7g==",
+  "dgSpecHash": "08+daJPg5GBQiTl7hHUIx04TD+uSYvwPvTAeGbeyl0ho1ilU0Mf/AbxMFu92Pn4Xt9x6ywEDnF0v04DuZaYWZQ==",
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.Android\\BitcoinWalletApp.Android.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\forru\\.nuget\\packages\\qbitninja.client\\1.0.3.52\\qbitninja.client.1.0.3.52.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\rg.plugins.popup\\2.0.0.11\\rg.plugins.popup.2.0.0.11.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\simplebase\\1.3.1\\simplebase.1.3.1.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\skiasharp.svg\\1.60.0\\skiasharp.svg.1.60.0.nupkg.sha512",
@@ -39,6 +40,7 @@
     "C:\\Users\\forru\\.nuget\\packages\\system.runtime.extensions\\4.1.0\\system.runtime.extensions.4.1.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.threading\\4.0.11\\system.threading.4.0.11.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",
