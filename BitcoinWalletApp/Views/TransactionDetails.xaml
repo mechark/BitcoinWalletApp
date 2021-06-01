@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BitcoinWalletApp.Views.TransactionDetails"
+             xmlns:local="clr-namespace:BitcoinWalletApp.Views"
+             BackgroundColor="#003F63"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="#003F63">
+            <Frame BackgroundColor="#003F63">
+                <ListView ItemsSource="{Binding Transaction}" ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                                <ViewCell.View>
+                                    <FlexLayout Direction="Row" JustifyContent="SpaceAround" >
+                                        <Label Text="{Binding AmountOfTransaction}" TextColor="#fff"/>
+                                        <Label Text="{Binding TransactionType}" TextColor="#00CC00" x:Name="TransactionType"/>
+                                        <Label Text="{Binding TransactionTime}" TextColor="#fff"/>
+                                    </FlexLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

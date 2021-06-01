@@ -13,24 +13,18 @@ namespace BitcoinWalletApp.iOS
 {
     public class MediaSave : IMediaSave
     {
-        public void SaveImage(string name, Stream data, string location = "temp")
+        public void SavePicture(byte[] imageByte, string fileName)
         {
-            var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            documentsPath = Path.Combine(documentsPath, "Orders", location);
-            Directory.CreateDirectory(documentsPath);
+            
+            var path = Path.Combine(Environment.SpecialFolder.CommonPictures.ToString(), "BWAIM");
 
-            string filePath = Path.Combine(documentsPath, name);
-
-            byte[] bArray = new byte[data.Length];
-            using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
+            if (!Directory.Exists(path))
             {
-                using (data)
-                {
-                    data.Read(bArray, 0, (int)data.Length);
-                }
-                int length = bArray.Length;
-                fs.Write(bArray, 0, length);
+                Directory.CreateDirectory(path);
             }
+
+            path = Path.Combine(path, fileName + ".png");
+            File.WriteAllBytes(path, imageByte);
         }
     }
 }

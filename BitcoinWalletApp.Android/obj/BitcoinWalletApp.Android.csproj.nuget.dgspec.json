@@ -48,7 +48,7 @@
             },
             "NBitcoin": {
               "target": "Package",
-              "version": "[5.0.77, )"
+              "version": "[5.0.81, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -66,33 +66,25 @@
               "target": "Package",
               "version": "[106.11.7, )"
             },
-            "SkiaSharp.Svg": {
-              "target": "Package",
-              "version": "[1.60.0, )"
-            },
-            "SkiaSharp.Views.Forms": {
-              "target": "Package",
-              "version": "[2.80.2, )"
-            },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.2, )"
+            },
+            "System.Dynamic.Runtime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Xamarin.Android.Support.Collections": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
-            },
-            "Xamarin.FFImageLoading.Forms": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
-            },
-            "Xamarin.FFImageLoading.Svg": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -146,13 +138,9 @@
               "target": "Package",
               "version": "[1.0.4, )"
             },
-            "Ipfs.Core": {
-              "target": "Package",
-              "version": "[0.55.0, )"
-            },
             "NBitcoin": {
               "target": "Package",
-              "version": "[5.0.77, )"
+              "version": "[5.0.81, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -174,17 +162,13 @@
               "target": "Package",
               "version": "[2.0.0.11, )"
             },
+            "System.Dynamic.Runtime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
-            },
-            "Xamarin.FFImageLoading.Forms": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
-            },
-            "Xamarin.FFImageLoading.Svg": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

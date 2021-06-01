@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
-using Syncfusion.ListView.XForms.iOS;
+//using Syncfusion.ListView.XForms.iOS;
 using UIKit;
 
 namespace BitcoinWalletApp.iOS
@@ -24,7 +24,7 @@ namespace BitcoinWalletApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Rg.Plugins.Popup.Popup.Init();
-            SfListViewRenderer.Init();
+          //  SfListViewRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

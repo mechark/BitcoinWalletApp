@@ -20,7 +20,7 @@ namespace BitcoinWalletApp.Droid
 {
     public class MediaSave : IMediaSave
     {
-        public async void SavePicture(byte[] imageByte, string fileName)
+        public void SavePicture(byte[] imageByte, string fileName)
         {
             var path = System.IO.Path.Combine(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures).ToString(), "BWAIM");
 
@@ -29,13 +29,7 @@ namespace BitcoinWalletApp.Droid
                 Directory.CreateDirectory(path);
             }
 
-            path = System.IO.Path.Combine(path, fileName + ".jpg");
-
-            /* using (var fileOutputStream = new FileOutputStream(path))
-             {
-                 await fileOutputStream.WriteAsync(imageByte);
-             } */
-
+            path = System.IO.Path.Combine(path, fileName + ".png");
             System.IO.File.WriteAllBytes(path, imageByte);
         }
     }

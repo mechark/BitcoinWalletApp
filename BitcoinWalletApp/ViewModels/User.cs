@@ -8,45 +8,47 @@ using Xamarin.Forms;
 
 namespace BitcoinWalletApp.ViewModels
 {
+    [Serializable]
     public class User
     {
-        public User ()
-        {
-            
-        }
+        public User () { }
 
         // Properties
 
-        protected UserInfo UserInfo { get => new UserInfo(PubKey); }
+        public UserInfo UserInfo { get; set; }
 
-        public string PubKey { get => (string)App.Current.Properties["pubKey"]; }
+        public string MainPubKey { get; set; }
 
-        public string PrivKey { get => (string)App.Current.Properties["privKey"]; }
+        public string MainPrivKey { get; set; }
+
+        public Dictionary<string, string> Keys { get; set; }
+
+        public decimal Balance { get; set; }
+
+        //Transactions
 
         public bool HasTransactions { get => UserInfo.HasTransactions(); }
 
-        public int TransactionsCount { get => (int)UserInfo.TransactionsCount; }
+        public int TransactionsCount { get; set; }
 
-        public int Balance { get => Convert.ToInt32(App.Current.Properties["UserBalance"]); }
+        public List<decimal> AmountOfTransactions { get; set; }
 
-        // Transactions *******************
+        public List<string> TransactionsType { get; set; }
 
-        public string [] AmountOfTransactions { get => App.Current.Properties["UserTransactionsSum"].ToString().Split(); }
-
-        public string [] TransactionsType { get => App.Current.Properties["UserTransactionType"].ToString().Split(); }
-
-        public string [] TransactionDateTime { get => App.Current.Properties["UserTransactionsTime"].ToString().Split(); }
-
-        // Transactions *******************
-
+        public List<string> TransactionDateTime { get; set; }
 
         // Methods
 
-        public ImageSource GetQRKey()
+        public ImageSource GetQRKey(string UserPubKey)
         {
-            byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(PubKey);
+            byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(UserPubKey);
 
             return ImageSource.FromStream(() => new MemoryStream(keyQRCodeBytes));
         }  
+
+        public decimal GetBalance (MoneyUnit moneyUnit)
+        {
+            return UserInfo.GetUserBalance(moneyUnit);
+        }
     }
 }

@@ -5,45 +5,83 @@ using NBitcoin;
 using Transactions;
 using Xamarin.Forms.Xaml;
 using BitcoinWalletApp.ViewModels;
+using BitcoinWalletApp.Views.TabbedPages;
 using System.Collections.Generic;
 using Android.Preferences;
 using Xamarin.Essentials;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BitcoinWalletApp
 {
     public partial class App : Application
     {
-        protected User User { get => new User(); }
         public App()
         {
             InitializeComponent();
             VersionTracking.Track();
             OnStart();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new ParentPage());
 
         }
 
         protected override void OnStart()
         {
-     //       if (VersionTracking.IsFirstLaunchEver)
-    //        {
-                CreateWallet wallet = new CreateWallet();
-
-                App.Current.Properties["pubKey"] = wallet.CreateKeys(Network.Main)["pubKey"];
-                App.Current.Properties["privKey"] = wallet.CreateKeys(Network.Main)["privKey"];
-
-                App.Current.Properties["UserBalance"] = 0;
-       //     }
-            // Только для тестирования. Должно быть удалено.
-            if (User.HasTransactions)
+            if (VersionTracking.IsFirstLaunchEver || !App.Current.Properties.ContainsKey("UObject"))
             {
                 UserInfo UserInfoWithTransactoins = new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn", true);
 
-                App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
-                App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
-                App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
-            } 
+                CreateWallet wallet = new CreateWallet();
+
+                Dictionary<string, string> keys = new Dictionary<string, string>();
+                keys.Add(wallet.CreateKeys(Network.Main)["pubKey"], wallet.CreateKeys(Network.Main)["privKey"]);
+
+                decimal userTotalbalance = 0;
+                string userMainPubKey = "";
+                string userMainPrivKey = "";
+                int userTransactionsCount = 0;
+                //Тестовый режим. Удалить позднее
+                List<decimal> userTransactionsAmount = UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC);
+                List<string> userTransactionsDateTime = UserInfoWithTransactoins.GetUserTransactionsDateTime();
+                List<string> userTrasnactionsType = UserInfoWithTransactoins.GetTypeOfTransaction();
+                //
+
+                foreach (KeyValuePair<string, string> address in keys)
+                {
+                    userTotalbalance += UserInfoWithTransactoins.GetUserBalance(MoneyUnit.BTC);
+                    userMainPubKey = address.Key;
+                    userMainPrivKey = address.Value;
+                    userTransactionsCount = Convert.ToInt32(UserInfoWithTransactoins.TransactionsCount);
+                }
+
+
+                User UObject = new User()
+                {
+                    Keys = keys,
+                    MainPubKey = userMainPubKey,
+                    MainPrivKey = userMainPrivKey,
+                    Balance = userTotalbalance,
+                    TransactionsCount = userTransactionsCount,
+                    UserInfo = new UserInfo("3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn", true),
+                    //Тестовый режим. Удалить позднее
+                    AmountOfTransactions = userTransactionsAmount,
+                    TransactionDateTime = userTransactionsDateTime,
+                    TransactionsType = userTrasnactionsType
+                    //
+                };
+
+                App.Current.Properties["UObject"] = UObject;
+            }
+        
+        //    }
+            // Только для тестирования. Должно быть удалено.
+         //   if (User.HasTransactions)
+
+           //     App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
+             //   App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
+               // App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
+
+        //    } 
         }
 
         protected override void OnSleep()

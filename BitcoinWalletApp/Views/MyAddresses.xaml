@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BitcoinWalletApp.Views.MyAddresses"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#003F63">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Добавить" TextColor="#fff" HorizontalOptions="End"/>
+            <StackLayout>
+                <ListView ItemsSource="{Binding Addresses}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Frame BackgroundColor="#fff" x:Name="ItemFrame">
+                                    <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                                        <StackLayout>
+                                            <Image Source="{Binding PublicKeyQRCode}" Aspect="AspectFit" BackgroundColor="#000"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="{Binding PublicKey}" Style="{StaticResource caption}" />
+                                            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                                                <Label Text="Баланс:" Style="{StaticResource header}" />
+                                                <Label Text="{Binding PublicKeyBalance}" Style="{StaticResource caption}" />
+                                            </FlexLayout>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    </Frame>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

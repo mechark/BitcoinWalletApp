@@ -7,7 +7,7 @@ using Xamarin.Forms.Platform.Android;
 using Android.Views;
 using Google.Android.Material.BottomNavigation;
 
-[assembly: ExportRenderer(typeof(MainPage), typeof(MyTabbedPageRenderer))]
+[assembly: ExportRenderer(typeof(ParentPage), typeof(MyTabbedPageRenderer))]
 namespace TabbedDemo.Droid
 {
     public class MyTabbedPageRenderer : TabbedPageRenderer
@@ -20,7 +20,6 @@ namespace TabbedDemo.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<TabbedPage> e)
         {
             base.OnElementChanged(e);
-            Android.Graphics.Color blackColor = ColorExtensions.ToAndroid(Color.Black);
             if (e.OldElement == null && e.NewElement != null)
             {
                 for (int i = 0; i <= this.ViewGroup.ChildCount - 1; i++)

@@ -48,13 +48,9 @@
               "target": "Package",
               "version": "[1.0.4, )"
             },
-            "Ipfs.Core": {
-              "target": "Package",
-              "version": "[0.55.0, )"
-            },
             "NBitcoin": {
               "target": "Package",
-              "version": "[5.0.77, )"
+              "version": "[5.0.81, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -76,17 +72,13 @@
               "target": "Package",
               "version": "[2.0.0.11, )"
             },
+            "System.Dynamic.Runtime": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
-            },
-            "Xamarin.FFImageLoading.Forms": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
-            },
-            "Xamarin.FFImageLoading.Svg": {
-              "target": "Package",
-              "version": "[2.4.11.982, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
