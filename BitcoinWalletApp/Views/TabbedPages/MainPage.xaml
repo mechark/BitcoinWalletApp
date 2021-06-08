@@ -14,13 +14,11 @@
                     <Frame BackgroundColor="#fff" CornerRadius="30" x:Name="MainFrame">
                         <FlexLayout Direction="Column">
                             <StackLayout x:Name="UserInfo__QRCode" >
-                            <Frame HasShadow="True">
                                 <Image x:Name="UserQRCodeKey">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding DownloadQRCode}" />
                                     </Image.GestureRecognizers>
                                 </Image>
-                            </Frame>
                         </StackLayout>
                         <StackLayout x:Name="UserInfo__StateOfWallet">
                                 <Label x:Name="UserPubKey" Style="{StaticResource caption}" HorizontalOptions="Center" FontSize="Default">

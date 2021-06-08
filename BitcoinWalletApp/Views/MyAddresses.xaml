@@ -7,27 +7,32 @@
              BackgroundColor="#003F63">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Добавить" TextColor="#fff" HorizontalOptions="End"/>
+            <Label Text="Добавить" TextColor="#fff" HorizontalOptions="End" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  Command="{Binding AddAddress}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <ActivityIndicator IsRunning="False" x:Name="AddingAddressIndincator" Color="#fff" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="False"/>
             <StackLayout>
-                <ListView ItemsSource="{Binding Addresses}" HasUnevenRows="True">
+                <ListView HasUnevenRows="True" ItemTapped="ListView_ItemTapped" x:Name="AddressesList" IsPullToRefreshEnabled="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <Frame BackgroundColor="#fff" x:Name="ItemFrame">
-                                    <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
-                                        <StackLayout>
-                                            <Image Source="{Binding PublicKeyQRCode}" Aspect="AspectFit" BackgroundColor="#000"/>
-                                        </StackLayout>
-                                        <StackLayout>
-                                            <Label Text="{Binding PublicKey}" Style="{StaticResource caption}" />
-                                            <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
-                                                <Label Text="Баланс:" Style="{StaticResource header}" />
-                                                <Label Text="{Binding PublicKeyBalance}" Style="{StaticResource caption}" />
-                                            </FlexLayout>
-                                        </StackLayout>
-                                    </FlexLayout>
-                                    </Frame>
+                                        <Frame BackgroundColor="#fff" x:Name="ItemFrame" CornerRadius="30" Margin="10">
+                                            <StackLayout Orientation="Horizontal">
+                                            <StackLayout Orientation="Horizontal" x:Name="QRCode" HeightRequest="80">
+                                                    <Image Source="{Binding PublicKeyQRCode}" />
+                                                </StackLayout>
+                                                <StackLayout>
+                                                    <Label Text="{Binding PublicKey}" Style="{StaticResource caption}" x:Name="PubKey"/>
+                                                    <FlexLayout Direction="Row" JustifyContent="SpaceBetween" >
+                                                        <Label Text="Баланс:" Style="{StaticResource header}"/>
+                                                        <Label Text="{Binding PublicKeyBalance}" Style="{StaticResource caption}" />
+                                                    </FlexLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>

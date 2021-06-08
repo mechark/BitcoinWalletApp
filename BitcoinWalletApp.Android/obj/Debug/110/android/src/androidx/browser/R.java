@@ -22,14 +22,14 @@ public final class R {
 		public static final int ttcIndex = 0x7f03027e;
 	}
 	public static final class color {
-		public static final int browser_actions_bg_grey = 0x7f050027;
-		public static final int browser_actions_divider_color = 0x7f050028;
-		public static final int browser_actions_text_color = 0x7f050029;
-		public static final int browser_actions_title_color = 0x7f05002a;
-		public static final int notification_action_color_filter = 0x7f0500b5;
-		public static final int notification_icon_bg_color = 0x7f0500b6;
-		public static final int ripple_material_light = 0x7f0500c2;
-		public static final int secondary_text_default_material_light = 0x7f0500c4;
+		public static final int browser_actions_bg_grey = 0x7f050028;
+		public static final int browser_actions_divider_color = 0x7f050029;
+		public static final int browser_actions_text_color = 0x7f05002a;
+		public static final int browser_actions_title_color = 0x7f05002b;
+		public static final int notification_action_color_filter = 0x7f0500b6;
+		public static final int notification_icon_bg_color = 0x7f0500b7;
+		public static final int ripple_material_light = 0x7f0500c3;
+		public static final int secondary_text_default_material_light = 0x7f0500c5;
 	}
 	public static final class dimen {
 		public static final int browser_actions_context_menu_max_width = 0x7f060050;

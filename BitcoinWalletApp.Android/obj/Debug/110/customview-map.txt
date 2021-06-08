@@ -14,6 +14,7 @@ background;obj\Debug\110\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\110\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\110\res\values\colors.xml
+color;obj\Debug\110\res\values\styles.xml
 com.google.android.material.appbar.AppBarLayout;C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\lp\48\jl\res\layout\flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\lp\48\jl\res\layout\rootlayout.xml
 com.google.android.material.appbar.AppBarLayout;C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\lp\48\jl\res\layout\shellcontent.xml

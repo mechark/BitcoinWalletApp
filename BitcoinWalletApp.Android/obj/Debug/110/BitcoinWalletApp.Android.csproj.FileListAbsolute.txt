@@ -240,9 +240,9 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\Xamarin.Google.Android.Material.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\Xamarin.Google.Guava.ListenableFuture.dll
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\jl\95f7b7fe-7178-4ef1-bfe1-fc42ad32dc69.jar
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\jl\7d74b7fc-f514-4054-80a9-00549010b422.jar
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_AndroidXJetifyJavaLibraryRules.stamp
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\proguard\6a4fdf80-00fb-429a-aaad-846ac53965b4.cfg
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\proguard\2cf3d29a-e5e3-4a2c-8b5e-81b8a39effa5.cfg
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_AndroidXJetifyProguardRules.stamp
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\_AndroidXJetifyProguardRules.jetify
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\stamp\_AndroidXCecilfy.stamp
@@ -522,6 +522,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64a25b61d9f8ee364f\TransitionUtils.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64a25b61d9f8ee364f\TransitionUtils_MatrixEvaluator.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64d8e59370ea18b869\MainActivity.java
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64d8e59370ea18b869\MyPickerRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64ee486da937c010f4\ButtonRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64ee486da937c010f4\FrameRenderer.java
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64ee486da937c010f4\ImageRenderer.java

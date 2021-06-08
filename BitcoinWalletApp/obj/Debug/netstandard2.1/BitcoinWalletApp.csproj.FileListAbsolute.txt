@@ -18,6 +18,7 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\F
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\App.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\MyAddresses.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\ParentPage.xaml.g.cs
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\AddressDetails_Popup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\ChangeCoin_Popup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\CopyPopup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\DownloadQRImagePopup.xaml.g.cs

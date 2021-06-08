@@ -29,8 +29,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
         protected double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
 
-        public string[] Test { get; set; }
-
         protected double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
 
         protected Label AmountOfTransaction { get; set; }
@@ -52,8 +50,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
         void PageSizeChange (object sender, EventArgs e)
         {
-            UserQRCodeKey.WidthRequest = HeightRequest / 5.778260030864198;
-            UserQRCodeKey.WidthRequest = HeightRequest / 4.778260030864198;
             MainFrame.HeightRequest = DisplayHeight / 1;
             UserPubKey.FontSize = DisplayHeight / 146.25;
             MyAddresses.Padding = DisplayHeight / 156;
@@ -148,7 +144,7 @@ namespace BitcoinWalletApp.Views.TabbedPages
         {
             // Понять работает ли обновление страницы только при обновлении данных или нет
             UserInfo UserInfo = new UserInfo(User.MainPubKey);
-            App.Current.Properties["UserBalance"] = UserInfo.GetUserBalance(MoneyUnit.BTC);
+            App.Current.Properties["UserBalance"] = UserInfo.GetUserBalance(MoneyUnit.BTC, User.MainPubKey);
 
             if (User.HasTransactions)
             {

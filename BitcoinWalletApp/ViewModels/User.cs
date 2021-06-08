@@ -4,6 +4,7 @@ using NBitcoin;
 using QRCodeKeys;
 using Transactions;
 using System.IO;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace BitcoinWalletApp.ViewModels
@@ -17,11 +18,15 @@ namespace BitcoinWalletApp.ViewModels
 
         public UserInfo UserInfo { get; set; }
 
+        public CreateWallet Wallet { get; set; }
+
         public string MainPubKey { get; set; }
 
         public string MainPrivKey { get; set; }
 
         public Dictionary<string, string> Keys { get; set; }
+
+        public ObservableCollection<Address> Addresses { get; set; } = new ObservableCollection<Address>();
 
         public decimal Balance { get; set; }
 
@@ -46,9 +51,9 @@ namespace BitcoinWalletApp.ViewModels
             return ImageSource.FromStream(() => new MemoryStream(keyQRCodeBytes));
         }  
 
-        public decimal GetBalance (MoneyUnit moneyUnit)
+        public decimal GetBalance (MoneyUnit moneyUnit, string userPubKey)
         {
-            return UserInfo.GetUserBalance(moneyUnit);
+            return UserInfo.GetUserBalance(moneyUnit, userPubKey);
         }
     }
 }
