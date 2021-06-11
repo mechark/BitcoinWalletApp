@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -18,8 +17,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
     public partial class SendPage : ContentPage
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
-
-        public List<Address> Addresses { get; protected set; } = new List<Address>();
 
         protected double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
 
@@ -42,7 +39,7 @@ namespace BitcoinWalletApp.Views.TabbedPages
         {
             foreach (KeyValuePair<string, string> keys in User.Keys)
             {
-                Addresses.Add(new Address()
+                User.Addresses.Add(new Address()
                 {
                     PublicKey = keys.Key + "...",
                     PublicKeyBalance = User.GetBalance(MoneyUnit.BTC, keys.Key).ToString(),
@@ -64,12 +61,28 @@ namespace BitcoinWalletApp.Views.TabbedPages
                 string address = AddressPicker.Items[AddressPicker.SelectedIndex];
                 string privateKey = User.Keys[address];
                 string receiver = Receiver.Text;
+                decimal sumToSend = Convert.ToDecimal(AmountToSend.Text);
 
                 string transactionHash;
                 Send userSender = new Send(privateKey, receiver);
-                userSender.SendCoins(Network.TestNet, 0.0000001m, out transactionHash);
+                userSender.SendCoins(Network.TestNet, sumToSend, out transactionHash);
+
+                ViewModels.Transaction transaction = new ViewModels.Transaction()
+                {
+                    UserAddress = address,
+                    ReceiverAddress = receiver,
+                    AmountOfTransaction = sumToSend.ToString(),
+                    TransactionHash = transactionHash,
+                    TransactionType = "Отправлено",
+                    TransactionTime = DateTime.Now.ToString()
+                };
+
+                User.Transactions.Add(transaction);
+                User.HasTransactions = true;
+
                 return transactionHash;
             });
         }
+
     }
 }

@@ -14,36 +14,19 @@ namespace BitcoinWalletApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TransactionDetails : ContentPage
     {
-        protected User User { get => App.Current.Properties["UObject"] as User; }
-
-        public List<Transaction> Transaction { get; set; } = new List<Transaction>();
+        protected static User User { get => App.Current.Properties["UObject"] as User; }
 
         public TransactionDetails()
         {
             InitializeComponent();
-
-            TransactoinInitialize();
+            TransactionsList.ItemsSource = User.Transactions;
 
             BindingContext = this;
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Navigation.PushPopupAsync(new TransactionDetails_Popup());
-        }
-
-        private void TransactoinInitialize()
-        {
-            Transaction = new List<Transaction>();
-            for (int transactionsNumber = 0; transactionsNumber < User.TransactionsCount; transactionsNumber++)
-            {
-                Transaction.Add(new Transaction()
-                {
-                    AmountOfTransaction = User.AmountOfTransactions[transactionsNumber].ToString(),
-                    TransactionType = User.TransactionsType[transactionsNumber],
-                    TransactionTime = User.TransactionDateTime[transactionsNumber]
-                });
-            }
+            Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
         }
     }
 }

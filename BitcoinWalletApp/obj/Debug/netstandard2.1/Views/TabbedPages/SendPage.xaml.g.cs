@@ -26,10 +26,10 @@ namespace BitcoinWalletApp.Views.TabbedPages {
         private global::Xamarin.Forms.Picker AddressPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry AmountToSend;
+        private global::Xamarin.Forms.Entry Receiver;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Entry Receiver;
+        private global::Xamarin.Forms.Entry AmountToSend;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -37,8 +37,8 @@ namespace BitcoinWalletApp.Views.TabbedPages {
             ChangeCoin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "ChangeCoin");
             MainFrame = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "MainFrame");
             AddressPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "AddressPicker");
-            AmountToSend = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "AmountToSend");
             Receiver = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Receiver");
+            AmountToSend = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "AmountToSend");
         }
     }
 }

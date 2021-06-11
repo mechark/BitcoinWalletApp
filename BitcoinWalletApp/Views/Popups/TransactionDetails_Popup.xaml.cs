@@ -16,28 +16,16 @@ namespace BitcoinWalletApp.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TransactionDetails_Popup : PopupPage
     {
-        protected User User { get => App.Current.Properties["UObject"] as User; }
+        protected static User User { get => App.Current.Properties["UObject"] as User; }
 
-        public ICommand DownloadQRCode => new Command(SaveQRPicture);
+        private static int SelectedItemIndex { get; set; }
 
-        public TransactionDetails_Popup()
+        public Transaction Transaction { get; set; } = User.Transactions[SelectedItemIndex];
+
+        public TransactionDetails_Popup(int selectedItemIndex)
         {
+            SelectedItemIndex = selectedItemIndex;
             InitializeComponent();
-            TransactionInitialize();
-        }
-
-        private void TransactionInitialize ()
-        {
-            UserQRCodeKey.Source = User.GetQRKey(User.MainPubKey);
-            
-        }
-
-        private void SaveQRPicture ()
-        {
-            byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(User.MainPubKey);
-
-            DependencyService.Get<IMediaSave>().SavePicture(keyQRCodeBytes, "PublicKey" + User.MainPubKey);
-            Navigation.PushPopupAsync(new DownloadQRImagePopup());
         }
 
         protected override void OnAppearing()

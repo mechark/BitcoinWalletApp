@@ -9,13 +9,17 @@
     <ContentPage.Content >
         <StackLayout BackgroundColor="#003F63">
             <Frame BackgroundColor="#003F63">
-                <ListView ItemsSource="{Binding Transaction}" ItemTapped="ListView_ItemTapped">
-                <ListView.ItemTemplate>
+                <ListView x:Name="TransactionsList" ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
                                     <Frame BackgroundColor="#fff" x:Name="ItemFrame" CornerRadius="30" Margin="10, 0, 0, 0">
                                         <FlexLayout Direction="Row" JustifyContent="SpaceAround" >
+                                            <Image Source="{Binding UserAddressesQRCode}"/>
+                                            <Label Text="{Binding TransactionHash}" TextColor="#fff"/>
+                                            <Label Text="{Binding UserAddress}" TextColor="#fff"/>
+                                            <Label Text="{Binding ReceiverAddress}" TextColor="#fff"/>
                                             <Label Text="{Binding AmountOfTransaction}" TextColor="#fff"/>
                                             <Label Text="{Binding TransactionType}" TextColor="#00CC00" x:Name="TransactionType"/>
                                             <Label Text="{Binding TransactionTime}" TextColor="#fff"/>
@@ -23,9 +27,9 @@
                                     </Frame>
                                 </ViewCell.View>
                             </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Frame>
         </StackLayout>
     </ContentPage.Content>

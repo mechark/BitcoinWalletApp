@@ -7,14 +7,17 @@
         <StackLayout>
             <Button Text="BTC" BackgroundColor="#003F63" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None"/>
             <Frame x:Name="MainFrame" BackgroundColor="#fff" CornerRadius="30">
+                <StackLayout>
+                    <Picker ItemsSource="{Binding Addresses}" ItemDisplayBinding="{Binding PublicKey}" x:Name="AddressPicker" 
+                            BackgroundColor="#fff" Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold"/>
                     <StackLayout>
-                    <Picker ItemsSource="{Binding Addresses}" ItemDisplayBinding="{Binding PublicKey}" x:Name="AddressPicker" BackgroundColor="#003F63" Title="Выберите ваш адрес"/>
-                        <StackLayout>
-                            <Entry Keyboard="Numeric" Placeholder="Введите сумму отправки" x:Name="AmountToSend" Style="{StaticResource entry}" />
-                            <Entry Placeholder="Введите адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" />
-                        </StackLayout>
+                        <Label Text="Адрес получателя" Style="{StaticResource header}" />
+                        <Entry Placeholder="Введите адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" />
+                        <Label Text="Сумма отправки" Style="{StaticResource header}" />
+                        <Entry Keyboard="Numeric" Placeholder="mBTC 0.00" x:Name="AmountToSend" Style="{StaticResource entry}" />
                     </StackLayout>
-                </Frame>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

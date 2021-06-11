@@ -31,9 +31,10 @@
 
             <Style x:Key="entry" TargetType="Entry">
                 <Setter Property="Margin" Value="10" />
-                <Setter Property="TextColor" Value="#f3f3f3" />
+                <Setter Property="PlaceholderColor" Value="#f3f3f3" />
                 <Setter Property="BackgroundColor" Value="#353D40" />
                 <Setter Property="FontFamily" Value="Open Sans" />
+                <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="14" />
             </Style>
             

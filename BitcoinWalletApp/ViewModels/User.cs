@@ -32,15 +32,19 @@ namespace BitcoinWalletApp.ViewModels
 
         //Transactions
 
-        public bool HasTransactions { get => UserInfo.HasTransactions(); }
+        public bool HasTransactions { get => UserInfo.HasTransactions(); set { } }
 
         public int TransactionsCount { get; set; }
 
         public List<decimal> AmountOfTransactions { get; set; }
 
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
+
         public List<string> TransactionsType { get; set; }
 
         public List<string> TransactionDateTime { get; set; }
+
+        public List<string> TransactionsHash { get; set; }
 
         // Methods
 
