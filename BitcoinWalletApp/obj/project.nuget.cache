@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IvXRHCAFcGfTIuGZQsNHVYItSi91tIOPs83GgHeCx/LU0HwnONoXG2+dA1CmN1ywNad4R1x/JfxME5hULm4W7w==",
+  "dgSpecHash": "tC1comioBlo8Bek2l53scDjwyc0FrANaH4JKAaFSek6gu08jY9Z4QA4eVsy8WMclw/nQeHmM0nlX4SdQU91Eqg==",
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,11 @@
     "C:\\Users\\forru\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.licensing\\19.1.0.67\\syncfusion.licensing.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.core\\19.1.0.67\\syncfusion.xamarin.core.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.datasource\\19.1.0.67\\syncfusion.xamarin.datasource.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.1.0.67\\syncfusion.xamarin.gridcommon.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.sflistview\\19.1.0.67\\syncfusion.xamarin.sflistview.19.1.0.67.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",

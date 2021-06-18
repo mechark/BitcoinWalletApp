@@ -17,40 +17,34 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-    <Frame x:Name="MainFrame">
-        <StackLayout>
+
+    <Frame x:Name="MainFrame" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="30" BackgroundColor="#353D40">
+        <StackLayout x:Name="Details">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Id транзакции:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.TransactionHash}" />
+                <Label TextColor="#fff" Text="Id транзакции:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="HashLabel" Style="{StaticResource header}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="От:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.UserAddress}" />
+                <Label TextColor="#fff" Text="Откуда:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="FromLabel" Style="{StaticResource header}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Откуда:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.UserAddress}" />
+                <Label TextColor="#fff" Text="Куда:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="ToLabel" Style="{StaticResource header}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Куда:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.ReceiverAddress}" />
+                <Label TextColor="#fff" Text="Сумма:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="AmountLabel" Style="{StaticResource header}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Сумма:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.AmountOfTransaction}" />
+                <Label TextColor="#fff" Text="Время:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="TimeLabel" Style="{StaticResource header}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Сумма:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.AmountOfTransaction}" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Время:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.TransactionTime}" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Статус:" Style="{StaticResource header}"/>
-                <Label Text="{Binding TransactionHash.TransactionType}" />
+                <Label TextColor="#fff" Text="Статус:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" x:Name="TypeLabel" Style="{StaticResource header}"/>
             </StackLayout>
         </StackLayout>
     </Frame>
+    
 </pages:PopupPage>    

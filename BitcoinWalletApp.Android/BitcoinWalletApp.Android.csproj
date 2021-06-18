@@ -77,6 +77,9 @@
     <PackageReference Include="RestSharp">
       <Version>106.11.7</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>19.1.0.67</Version>
+    </PackageReference>
     <PackageReference Include="System.Drawing.Common">
       <Version>5.0.2</Version>
     </PackageReference>
@@ -149,6 +152,9 @@
     <AndroidResourceAnalysisConfig Include="Resources\drawable\refresh.xml">
       <SubType>Designer</SubType>
     </AndroidResourceAnalysisConfig>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\MainIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

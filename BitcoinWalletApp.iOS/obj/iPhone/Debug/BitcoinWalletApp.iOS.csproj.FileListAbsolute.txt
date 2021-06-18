@@ -9,6 +9,13 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\QRCod
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\RestSharp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.Licensing.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.Core.XForms.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.Core.XForms.iOS.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.DataSource.Portable.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.GridCommon.Portable.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.SfListView.XForms.dll
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Syncfusion.SfListView.XForms.iOS.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\System.Net.Http.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EEni5QoGMmy+LD1kli0ZqIClI47W0tAHZv5oQAOlNMFBJ/v1k53PvixxqwUqCTZf9UiMQ+PKc3v6Ykpv4uEZOg==",
+  "dgSpecHash": "szLRJjc+JvPiMpbVpkpCxk+jfeZTrYN5u1s33mt9w4UlvEIPlGtJTdVxaaasFaJPBwXeCyEZZnk9uCKKXJti8A==",
   "success": true,
   "projectFilePath": "C:\\BitcoinWalletApp\\BitcoinWalletApp\\BitcoinWalletApp.Android\\BitcoinWalletApp.Android.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,11 @@
     "C:\\Users\\forru\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\rg.plugins.popup\\2.0.0.11\\rg.plugins.popup.2.0.0.11.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.licensing\\19.1.0.67\\syncfusion.licensing.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.core\\19.1.0.67\\syncfusion.xamarin.core.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.datasource\\19.1.0.67\\syncfusion.xamarin.datasource.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.1.0.67\\syncfusion.xamarin.gridcommon.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\forru\\.nuget\\packages\\syncfusion.xamarin.sflistview\\19.1.0.67\\syncfusion.xamarin.sflistview.19.1.0.67.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.collections.concurrent\\4.0.12\\system.collections.concurrent.4.0.12.nupkg.sha512",
     "C:\\Users\\forru\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",

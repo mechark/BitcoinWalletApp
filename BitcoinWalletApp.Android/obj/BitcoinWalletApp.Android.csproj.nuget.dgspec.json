@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[106.11.7, )"
             },
+            "Syncfusion.Xamarin.SfListView": {
+              "target": "Package",
+              "version": "[19.1.0.67, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -161,6 +165,10 @@
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[2.0.0.11, )"
+            },
+            "Syncfusion.Xamarin.SfListView": {
+              "target": "Package",
+              "version": "[19.1.0.67, )"
             },
             "System.Dynamic.Runtime": {
               "target": "Package",

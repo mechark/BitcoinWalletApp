@@ -10,6 +10,7 @@ using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using System.Collections.ObjectModel;
 
 namespace BitcoinWalletApp.Views.TabbedPages
 {
@@ -18,14 +19,28 @@ namespace BitcoinWalletApp.Views.TabbedPages
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
 
-        protected double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
+        public ObservableCollection<Address> Addresses { get; protected set; } = new ObservableCollection<Address>();
+
+        private string amountToSend;
+
+        public string SumToSend
+        {
+            get { return amountToSend; }
+            set
+            {
+                amountToSend = value;
+
+                OnPropertyChanged(nameof(SumToSend));
+            }
+        }
 
         protected double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
 
         public SendPage()
         {
             InitializeComponent();
-            AdressesInformationInitialize();
+            Addresses = User.Addresses;
+
             SizeChanged += PageSizeChange;
             BindingContext = this;
         }
@@ -33,20 +48,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
         void PageSizeChange(object sender, EventArgs e)
         {
             MainFrame.HeightRequest = DisplayHeight / 1;
-        }
-
-        protected void AdressesInformationInitialize()
-        {
-            foreach (KeyValuePair<string, string> keys in User.Keys)
-            {
-                User.Addresses.Add(new Address()
-                {
-                    PublicKey = keys.Key + "...",
-                    PublicKeyBalance = User.GetBalance(MoneyUnit.BTC, keys.Key).ToString(),
-                    PublicKeyQRCode = User.GetQRKey(keys.Key),
-                    PublicKeyNumberOfTransactions = User.TransactionsCount.ToString()
-                });
-            }
         }
 
         private async void Button_SendCoins(object sender, EventArgs e)
@@ -61,11 +62,11 @@ namespace BitcoinWalletApp.Views.TabbedPages
                 string address = AddressPicker.Items[AddressPicker.SelectedIndex];
                 string privateKey = User.Keys[address];
                 string receiver = Receiver.Text;
-                decimal sumToSend = Convert.ToDecimal(AmountToSend.Text);
+                decimal sumToSend = Convert.ToDecimal(SumToSend.Replace(",", "")) / 1000000000;
 
                 string transactionHash;
                 Send userSender = new Send(privateKey, receiver);
-                userSender.SendCoins(Network.TestNet, sumToSend, out transactionHash);
+                userSender.SendCoins(Network.Main, sumToSend, out transactionHash);
 
                 ViewModels.Transaction transaction = new ViewModels.Transaction()
                 {
@@ -82,6 +83,45 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
                 return transactionHash;
             });
+        }
+
+        private void AmountToSend_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(SumToSend))
+            {
+                string sum = SumToSend.Replace(",", "");
+
+                if (sum.Length == 4)
+                {
+                    sum = sum.Insert(1, ",");
+                }
+                else if (sum.Length == 5)
+                {
+                    sum = sum.Insert(2, ",");
+                }
+                else if (sum.Length == 6)
+                {
+                    sum = sum.Insert(3, ",");
+                }
+                else if (sum.Length == 7)
+                {
+                    sum = sum.Insert(1, ",");
+                    sum = sum.Insert(5, ",");
+                }
+                else if (sum.Length == 8)
+                {
+                    sum = sum.Insert(2, ",");
+                    sum = sum.Insert(6, ",");
+                }
+                else if (sum.Length == 9)
+                {
+                    sum = sum.Insert(3, ",");
+                    sum = sum.Insert(7, ",");
+                }
+
+                AmountToSend.Text = sum;
+            }
+            
         }
 
     }

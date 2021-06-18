@@ -17,25 +17,49 @@ using System.IO;
 using System.Globalization;
 using Rg.Plugins.Popup.Extensions;
 using Drawing = System.Drawing;
+using System.Threading.Tasks;
 
 namespace BitcoinWalletApp.Views.TabbedPages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage, ICoinTypeChange
     {
-        protected static User User { get => App.Current.Properties["UObject"] as User; }
+        private User User { get => App.Current.Properties["UObject"] as User; }
 
-        protected ViewModels.Transaction Transaction { get => new ViewModels.Transaction(); }
+        private List<ViewModels.Transaction> RecentTransactions
+        {
+            get
+            {
+                List<ViewModels.Transaction> recentTransactions = new List<ViewModels.Transaction>();
+                
+                if (User.Transactions.Count > 3)
+                {
+                    for (int transaction = 0; transaction < 4; transaction++)
+                    {
+                        recentTransactions.Add(User.Transactions[transaction]);
+                    }
+                }
+                else
+                {
+                    for (int transaction = 0; transaction < User.Transactions.Count; transaction++)
+                    {
+                        recentTransactions.Add(User.Transactions[transaction]);
+                    }
+                }
+                
+                return recentTransactions;
+            }
+        }
 
-        protected double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
+        private double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
 
-        protected double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
-
-        protected Label AmountOfTransaction { get; set; }
+        private double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
 
         public ICommand CopyAddressCommand => new Command(Copy_Clicked);
 
         public ICommand AllTransactionsShowCommand => new Command(AllTransactionsShow);
+
+        public ICommand ChangeType => new Command(ChangeCoinType);
 
         public ICommand DownloadQRCode => new Command(SaveQRImage);
 
@@ -61,84 +85,8 @@ namespace BitcoinWalletApp.Views.TabbedPages
             UserPubKey.Text = User.MainPubKey;
             UserQRCodeKey.Source = User.GetQRKey(User.MainPubKey);
             UserBalance.Text = User.Balance.ToString() + " " + moneyUnit.ToString();
-            
-            if (VersionTracking.IsFirstLaunchEver)
-            {
-                if (User.HasTransactions)
-                {
-                    CreateRecentTransactionLabels(User.TransactionsCount, moneyUnit);
-                }
-            }  
+            UserRecentTransaction.ItemsSource = RecentTransactions;
         }
-
-        private void CreateRecentTransactionLabels(int transactionsCount, MoneyUnit moneyUnit)
-        {
-            if (transactionsCount > 3) { transactionsCount = 3; }
-
-            if (User.HasTransactions)
-            {
-                for (int transaction = 0; transaction < transactionsCount; transaction++)
-                {
-
-                    FlexLayout layout = new FlexLayout
-                    {
-                        Direction = FlexDirection.Row,
-                        JustifyContent = FlexJustify.SpaceBetween
-                    };
-
-                    AmountOfTransaction = new Label
-                    {
-                        Text = User.AmountOfTransactions[transaction] + " " + moneyUnit.ToString(),
-                        TextColor = Color.White,
-                        FontSize = DisplayHeight / 167.1428571428571,
-                        VerticalTextAlignment = TextAlignment.Center
-                    };
-
-                    Label TypeOfTransaction = new Label
-                    {
-                        Text = User.TransactionsType[transaction],
-                        TextColor = Color.White,
-                        HorizontalOptions = LayoutOptions.Center,
-                        FontSize = DisplayHeight / 167.1428571428571
-                    };
-
-                    if (User.TransactionsType[transaction] == "Получено")
-                    {
-                        TypeOfTransaction.TextColor = Color.FromHex("#00CC00");
-                    }
-                    else if (User.TransactionsType[transaction] == "Отправлено")
-                    {
-                        TypeOfTransaction.TextColor = Color.FromHex("#CC0000");
-                    }
-
-                    Label DateTimeOfTransaction = new Label
-                    {
-                        Text = User.TransactionDateTime[transaction],
-                        TextColor = Color.White,
-                        VerticalOptions = LayoutOptions.Center,
-                        FontSize = DisplayHeight / 167.1428571428571
-                    };
-
-                    TypeAndAmountOfTransaction.Children.Add(layout);
-
-                    layout.Children.Add(AmountOfTransaction);
-                    layout.Children.Add(TypeOfTransaction);
-                    layout.Children.Add(DateTimeOfTransaction);
-                }
-            }
-            else
-            {
-                Label noTransactions = new Label
-                {
-                    Text = User.TransactionsType[0],
-                    TextColor = Color.Black
-                };
-
-                Grid.SetColumn(noTransactions, 1);
-                TypeAndAmountOfTransaction.Children.Add(noTransactions);
-            }
-        }
-
 
         private void Refresh_Clicked(object sender, EventArgs e)
         {
@@ -156,30 +104,34 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
                 App.Current.Properties["IsFilled"] = true;
             }
-        }
+        } 
 
-        private void ChangeCoin_Clicked(object sender, EventArgs e)
+        public async void ChangeCoinType()
         {
-            var change = new ChangeCoin_Popup().CoinsList_ItemTapped();
-            ChangeCoin.Text = change;
+            var change = await DisplayActionSheet(null, null, null, "BTC", "Sat", "mBTC");
 
-            if (change == "BTC")
+            if (change != null && change != ChangeCoin.Text)
             {
-                UserBalance.Text = User.Balance.ToString() + " " + change;
+                ChangeCoin.Text = change;
+
+                User.CoinType = change;
+
+                await new TransactionsDetails().ChangeCoinTypeAsync();
+
+                if (change == "Sat")
+                {
+                    UserBalance.Text = (User.Balance * 100000).ToString() + " sat";
+                }
+                else if (change == "mBTC")
+                {
+                    UserBalance.Text = (User.Balance * 1000).ToString() + " mBTC";
+                }
+                else if (change == "BTC")
+                {
+                    UserBalance.Text = User.Balance.ToString() + " BTC";
+                }
             }
-            else if (change == "Sat")
-            {
-                UserBalance.Text = (User.Balance * 100000).ToString() + " " + change;
-            }
-            else if (change == "mBTC")
-            {
-                UserBalance.Text = (User.Balance * 1000).ToString() + " " + change;
-            }
-            else
-            {
-                ChangeCoin.Text = "BTC";
-                UserBalance.Text = User.Balance.ToString() + "BTC";
-            }
+            
         }
 
         private void SaveQRImage()
@@ -207,7 +159,7 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
         private void AllTransactionsShow()
         {
-            Navigation.PushAsync(new TransactionDetails());
+            Navigation.PushAsync(new TransactionsDetails());
         }
 
 

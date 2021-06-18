@@ -30,15 +30,17 @@ namespace BitcoinWalletApp.ViewModels
 
         public decimal Balance { get; set; }
 
+        public string CoinType { get; set; } = "BTC";
+
         //Transactions
 
-        public bool HasTransactions { get => UserInfo.HasTransactions(); set { } }
+        public bool HasTransactions { get; set; } = false;
 
         public int TransactionsCount { get; set; }
 
         public List<decimal> AmountOfTransactions { get; set; }
 
-        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
+        public ObservableCollection<Transaction> Transactions { get; set; } = new ObservableCollection<Transaction>();
 
         public List<string> TransactionsType { get; set; }
 

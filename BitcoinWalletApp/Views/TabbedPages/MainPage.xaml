@@ -3,13 +3,17 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="BitcoinWalletApp.Views.TabbedPages.MainPage"
             BackgroundColor="#003F63">
-    
+            
         <ContentPage.Content>
             <StackLayout>
-                <FlexLayout Direction="Row" JustifyContent="SpaceBetween" >
+                <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center">
                     <Button Text="Обновить" TextColor="#fff" BackgroundColor="#003F63" Clicked="Refresh_Clicked"/>
-                    <Button Text="BTC" BackgroundColor="#003F63" Clicked="ChangeCoin_Clicked" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None"/>
-                </FlexLayout>
+                <Label Text="BTC" BackgroundColor="#003F63" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None" Margin="5">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangeType}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </FlexLayout>
                 <FlexLayout Direction="Column">
                     <Frame BackgroundColor="#fff" CornerRadius="30" x:Name="MainFrame">
                         <FlexLayout Direction="Column">
@@ -21,7 +25,7 @@
                                 </Image>
                         </StackLayout>
                         <StackLayout x:Name="UserInfo__StateOfWallet">
-                                <Label x:Name="UserPubKey" Style="{StaticResource caption}" HorizontalOptions="Center" FontSize="Default">
+                                <Label x:Name="UserPubKey" Style="{StaticResource header}" HorizontalOptions="Center" FontSize="Default">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding CopyAddressCommand}" />
                                     </Label.GestureRecognizers>
@@ -34,9 +38,9 @@
                                     <Button Text="Мои адреса" Clicked="MyAddresses_Clicked" Style="{StaticResource button}" x:Name="MyAddresses"/>
                                 </StackLayout>
                             </StackLayout>
-                            <ScrollView x:Name="UserRecentTransactions" Margin="0, 20, 0, 0">
-                                <Frame BackgroundColor="#353D40" CornerRadius="10">
-                                <StackLayout >
+                            <StackLayout x:Name="UserRecentTransactions" Margin="0, 20, 0, 0" >
+                                <Frame BackgroundColor="#353D40" CornerRadius="10" >
+                                <StackLayout VerticalOptions="FillAndExpand">
                                     <FlexLayout JustifyContent="SpaceBetween">
                                         <Label Text="Недавние транзакции" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium"/>
                                         <Label Text="Все" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium">
@@ -45,14 +49,22 @@
                                             </Label.GestureRecognizers>
                                         </Label>
                                     </FlexLayout>
-                                    <FlexLayout JustifyContent="SpaceBetween" >
-                                        <StackLayout x:Name="TypeAndAmountOfTransaction"></StackLayout>
-                                        <StackLayout x:Name="DateOfTransaction" ></StackLayout>
-                                    </FlexLayout>
+                                    <ListView x:Name="UserRecentTransaction" Margin="0, 10, 0, 0" SeparatorColor="#fff" HeightRequest="60">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <StackLayout Orientation="Horizontal" >
+                                                        <Label Text="{Binding AmountOfTransaction}" Style="{StaticResource header}" TextColor="#fff"/>
+                                                        <Label Text="{Binding TransactionType}" Style="{StaticResource header}" TextColor="#fff"/>
+                                                        <Label Text="{Binding TransactionTime}" Style="{StaticResource header}" TextColor="#fff"/>
+                                                    </StackLayout>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
                                 </StackLayout>
                             </Frame>
-                            </ScrollView>
-                        <ActivityIndicator IsRunning="False" x:Name="NavigateToTransactionsPageIndicator"/>
+                            </StackLayout>
                     </FlexLayout>
                     </Frame>
                 </FlexLayout>

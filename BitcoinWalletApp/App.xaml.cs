@@ -22,13 +22,12 @@ namespace BitcoinWalletApp
             OnStart();
 
             MainPage = new NavigationPage(new ParentPage());
-
         }
 
         protected override void OnStart()
         {
-            if (VersionTracking.IsFirstLaunchForCurrentBuild)
-            {
+          //  if (VersionTracking.IsFirstLaunchForCurrentBuild)
+         //   {
 
                 CreateWallet wallet = new CreateWallet(Network.Main);
 
@@ -44,11 +43,6 @@ namespace BitcoinWalletApp
                 string userMainPubKey = "";
                 string userMainPrivKey = "";
                 int userTransactionsCount = 0;
-                //Тестовый режим. Удалить позднее
-                //     List<decimal> userTransactionsAmount = UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC);
-                //       List<string> userTransactionsDateTime = UserInfoWithTransactoins.GetUserTransactionsDateTime();
-                //       List<string> userTrasnactionsType = UserInfoWithTransactoins.GetTypeOfTransaction();
-                //
 
                 foreach (KeyValuePair<string, string> address in keys)
                 {
@@ -74,30 +68,30 @@ namespace BitcoinWalletApp
                     //
                 };
 
-                
-
-                foreach (KeyValuePair<string, string> Keys in UObject.Keys)
+                UObject.Addresses.Add(new Address()
                 {
-                    UObject.Addresses.Add(new Address()
-                    {
-                        PublicKey = Keys.Key + "...",
-                        PublicKeyBalance = UObject.GetBalance(MoneyUnit.BTC, Keys.Key).ToString(),
-                        PublicKeyQRCode = UObject.GetQRKey(Keys.Key),
-                    });
-                }
+                    PublicKey = userMainPubKey,
+                    PublicKeyBalance = userTotalbalance.ToString() + " BTC",
+                    PublicKeyQRCode = UObject.GetQRKey(userMainPubKey),
+                });
+
+                UObject.Transactions.Add(new ViewModels.Transaction
+                {
+                    AmountOfTransaction = "0.00257474",
+                    DecimalAmountOfTransaction = 0.00257474m,
+                    TransactionTime = "22.03.2020 13:39",
+                    TransactionType = "Получено",
+                    TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",
+                    UserAddress = "3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn",
+                    ReceiverAddress = "1Gh6DKC8CDP0Ym1U78vdW0l79x"
+                });
+
+                UObject.HasTransactions = true;
 
                 App.Current.Properties["UObject"] = UObject;
-                //   }
 
-                //    }
-                // Только для тестирования. Должно быть удалено.
-                //   if (User.HasTransactions)
 
-                //     App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
-                //   App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
-                // App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
-
-            }
+            //    }
         }
 
         protected override void OnSleep()

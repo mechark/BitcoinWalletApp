@@ -9,12 +9,20 @@
             <Frame x:Name="MainFrame" BackgroundColor="#fff" CornerRadius="30">
                 <StackLayout>
                     <Picker ItemsSource="{Binding Addresses}" ItemDisplayBinding="{Binding PublicKey}" x:Name="AddressPicker" 
-                            BackgroundColor="#fff" Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold"/>
+                            BackgroundColor="#fff" Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold" TextColor="#000"/>
                     <StackLayout>
-                        <Label Text="Адрес получателя" Style="{StaticResource header}" />
-                        <Entry Placeholder="Введите адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" />
-                        <Label Text="Сумма отправки" Style="{StaticResource header}" />
-                        <Entry Keyboard="Numeric" Placeholder="mBTC 0.00" x:Name="AmountToSend" Style="{StaticResource entry}" />
+                        <StackLayout Margin="0, 20, 0, 0">
+                            <Label Text="Адрес получателя" Style="{StaticResource header}" FontSize="Large" HorizontalOptions="Center"/>
+                            <Entry Placeholder="Введите адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" />
+                            <Label Text="Сумма отправки" Style="{StaticResource header}" FontSize="Large" HorizontalOptions="Center"/>
+                            <Entry Keyboard="Numeric" Placeholder="0,00 sat" x:Name="AmountToSend" PlaceholderColor="#fff" BackgroundColor="#353D40" Style="{StaticResource entry}"
+                               Text="{Binding SumToSend}"
+                               TextColor="#fff"
+                               MaxLength="11"
+                               TextChanged="AmountToSend_TextChanged" />
+                        </StackLayout>
+                        
+                        <Button Text="Отправить" Style="{StaticResource button}" Clicked="Button_SendCoins"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>

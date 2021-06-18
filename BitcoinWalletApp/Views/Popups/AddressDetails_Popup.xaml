@@ -17,8 +17,20 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Frame x:Name="MainFrame" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="30">
+            <StackLayout x:Name="Details">
+                <StackLayout HorizontalOptions="Center">
+                    <Image x:Name="AddressQRCode"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Адрес: " Style="{StaticResource header}" />
+                    <Label x:Name="AddressLabel" Style="{StaticResource header}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Баланс: " Style="{StaticResource header}" />
+                    <Label x:Name="BalanceLabel" Style="{StaticResource header}" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
 </pages:PopupPage>    

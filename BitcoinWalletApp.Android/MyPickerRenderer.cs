@@ -23,9 +23,6 @@ namespace BitcoinWalletApp.Droid
         {
             base.OnElementChanged(e);
 
-            Control.SetHighlightColor(Color.Color.Pink);
-            Control.SetSingleLine(true);
-            Control.SetBackgroundColor(Color.Color.ParseColor("#000000"));
         }
     }
 }

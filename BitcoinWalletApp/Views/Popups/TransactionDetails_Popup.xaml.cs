@@ -18,15 +18,24 @@ namespace BitcoinWalletApp.Views.Popups
     {
         protected static User User { get => App.Current.Properties["UObject"] as User; }
 
-        private static int SelectedItemIndex { get; set; }
-
-        public Transaction Transaction { get; set; } = User.Transactions[SelectedItemIndex];
+        public Transaction Transaction { get; set; }
 
         public TransactionDetails_Popup(int selectedItemIndex)
         {
-            SelectedItemIndex = selectedItemIndex;
+            Transaction = User.Transactions[selectedItemIndex];
             InitializeComponent();
+
+            HashLabel.Text = Transaction.TransactionHash.Substring(0, 22) + "...";
+            FromLabel.Text = Transaction.UserAddress.Substring(0, 25) + "...";
+            ToLabel.Text = Transaction.ReceiverAddress.Substring(0, 25) + "...";
+            AmountLabel.Text = Transaction.AmountOfTransaction;
+            TimeLabel.Text = Transaction.TransactionTime;
+            TypeLabel.Text = Transaction.TransactionType;
+
+            MainFrame.HeightRequest = Details.Height;
         }
+
+
 
         protected override void OnAppearing()
         {
