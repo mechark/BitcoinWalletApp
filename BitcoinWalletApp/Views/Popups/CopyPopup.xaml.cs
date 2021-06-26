@@ -15,7 +15,6 @@ namespace BitcoinWalletApp.Views.Popups
         public CopyPopup()
         {
             InitializeComponent();
-
         }
 
         protected override void OnAppearing()

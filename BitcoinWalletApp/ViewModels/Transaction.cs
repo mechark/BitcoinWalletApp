@@ -15,5 +15,6 @@ namespace BitcoinWalletApp.ViewModels
         public string UserAddress { get; set; }
         public string ReceiverAddress { get; set; }
         public string TransactionHash { get; set; }
+        public Color TransactionTypeColor { get; set; }
     }
 }

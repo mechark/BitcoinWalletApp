@@ -7,6 +7,9 @@ using UIKit;
 using System.IO;
 using Xamarin.Forms;
 using BitcoinWalletApp.iOS;
+using AndroidX.Core.Content;
+using Android;
+using Android.Content.PM;
 
 [assembly: Dependency(typeof(MediaSave))]
 namespace BitcoinWalletApp.iOS

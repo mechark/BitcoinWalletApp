@@ -4,9 +4,7 @@
              x:Class="BitcoinWalletApp.Views.TabbedPages.ChangePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <WebView Source="https://www.moonpay.com/" WidthRequest="1000" HeightRequest="1000" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -18,6 +18,10 @@ using System.Globalization;
 using Rg.Plugins.Popup.Extensions;
 using Drawing = System.Drawing;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using Android.Content.Res;
+using Android.Webkit;
+using Plugin.Permissions;
 
 namespace BitcoinWalletApp.Views.TabbedPages
 {
@@ -26,11 +30,11 @@ namespace BitcoinWalletApp.Views.TabbedPages
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
 
-        private List<ViewModels.Transaction> RecentTransactions
+        private ObservableCollection<ViewModels.Transaction> RecentTransactions
         {
             get
             {
-                List<ViewModels.Transaction> recentTransactions = new List<ViewModels.Transaction>();
+                ObservableCollection<ViewModels.Transaction> recentTransactions = new ObservableCollection<ViewModels.Transaction>();
                 
                 if (User.Transactions.Count > 3)
                 {
@@ -51,8 +55,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
             }
         }
 
-        private double DisplayWidth { get => DeviceDisplay.MainDisplayInfo.Width; }
-
         private double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
 
         public ICommand CopyAddressCommand => new Command(Copy_Clicked);
@@ -66,26 +68,31 @@ namespace BitcoinWalletApp.Views.TabbedPages
         public MainPage()
         {
             InitializeComponent();
-            UserInitialize(MoneyUnit.BTC);
             SizeChanged += PageSizeChange;
+            UserInitialize(MoneyUnit.BTC);
 
+            UserRecentTransaction.ItemsSource = RecentTransactions;
             BindingContext = this;
         }
 
         void PageSizeChange (object sender, EventArgs e)
         {
-            MainFrame.HeightRequest = DisplayHeight / 1;
+            MainFrame.HeightRequest = DisplayHeight / 3.366906474820144;
+            UserRecentTransaction.HeightRequest = DisplayHeight / 16.83453237410072;
             UserPubKey.FontSize = DisplayHeight / 146.25;
             MyAddresses.Padding = DisplayHeight / 156;
+            UserInitialize(MoneyUnit.BTC);
+
         }
 
         //Methods
-        public void UserInitialize(MoneyUnit moneyUnit)
+        public async void UserInitialize(MoneyUnit moneyUnit)
         {
             UserPubKey.Text = User.MainPubKey;
             UserQRCodeKey.Source = User.GetQRKey(User.MainPubKey);
             UserBalance.Text = User.Balance.ToString() + " " + moneyUnit.ToString();
             UserRecentTransaction.ItemsSource = RecentTransactions;
+            Plugin.Permissions.Abstractions.PermissionStatus status = await CrossPermissions.Current.RequestPermissionAsync<StoragePermission>();
         }
 
         private void Refresh_Clicked(object sender, EventArgs e)
@@ -109,29 +116,34 @@ namespace BitcoinWalletApp.Views.TabbedPages
         public async void ChangeCoinType()
         {
             var change = await DisplayActionSheet(null, null, null, "BTC", "Sat", "mBTC");
+            int balance = Convert.ToInt32(User.Balance);
 
             if (change != null && change != ChangeCoin.Text)
             {
                 ChangeCoin.Text = change;
-
                 User.CoinType = change;
 
-                await new TransactionsDetails().ChangeCoinTypeAsync();
+                await User.ChangeCoinTypeAsync();
 
                 if (change == "Sat")
                 {
-                    UserBalance.Text = (User.Balance * 100000).ToString() + " sat";
+                    UserBalance.Text = (balance * 100000).ToString() + " sat";
+
                 }
                 else if (change == "mBTC")
                 {
-                    UserBalance.Text = (User.Balance * 1000).ToString() + " mBTC";
+                    UserBalance.Text = (balance * 1000).ToString() + " mBTC";
                 }
                 else if (change == "BTC")
                 {
-                    UserBalance.Text = User.Balance.ToString() + " BTC";
+                    UserBalance.Text = "";
+                    UserBalance.Text = balance.ToString() + " BTC";
                 }
+
+                UserRecentTransaction.ItemsSource = null;
+                UserRecentTransaction.ItemsSource = RecentTransactions;
+
             }
-            
         }
 
         private void SaveQRImage()
@@ -140,11 +152,12 @@ namespace BitcoinWalletApp.Views.TabbedPages
 
             DependencyService.Get<IMediaSave>().SavePicture(keyQRCodeBytes, "PublicKey" + User.MainPubKey);
             Navigation.PushPopupAsync(new DownloadQRImagePopup());
+            Navigation.PopPopupAsync(true);
         }
 
         private void MyAddresses_Clicked (object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MyAddresses());
+            Navigation.PushAsync(new MyAddresses(), true);
         }
 
         private void Copy_Clicked()
@@ -152,16 +165,14 @@ namespace BitcoinWalletApp.Views.TabbedPages
             if (Clipboard.GetTextAsync().ToString() != User.MainPubKey)
             {
                 Clipboard.SetTextAsync(User.MainPubKey);
-                Navigation.PushPopupAsync(new CopyPopup());
+                Navigation.PushPopupAsync(new CopyPopup(), true);
                 Navigation.PopPopupAsync(true);
             }
         }
 
         private void AllTransactionsShow()
         {
-            Navigation.PushAsync(new TransactionsDetails());
+            Navigation.PushAsync(new TransactionsDetails(), true);
         }
-
-
     }
 }

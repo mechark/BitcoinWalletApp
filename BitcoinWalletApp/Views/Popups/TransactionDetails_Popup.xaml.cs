@@ -31,6 +31,7 @@ namespace BitcoinWalletApp.Views.Popups
             AmountLabel.Text = Transaction.AmountOfTransaction;
             TimeLabel.Text = Transaction.TransactionTime;
             TypeLabel.Text = Transaction.TransactionType;
+            TypeLabel.TextColor = Transaction.TransactionTypeColor;
 
             MainFrame.HeightRequest = Details.Height;
         }

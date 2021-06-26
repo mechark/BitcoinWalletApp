@@ -17,12 +17,11 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-        <StackLayout>
+    <StackLayout 
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" >
         <Frame BackgroundColor="#fff" CornerRadius="10">
-            <StackLayout>
-                <Label Text="Скачивается" TextColor="#000" HorizontalTextAlignment="Center" Style="{StaticResource header}"/>
-                <ProgressBar Progress="0" x:Name="SaveImageProgressBar" BackgroundColor="#000" ProgressColor="#fff"/>
-            </StackLayout>
+            <Label Style="{StaticResource header}">Скачано</Label>
         </Frame>
-        </StackLayout>
+    </StackLayout>
 </pages:PopupPage>

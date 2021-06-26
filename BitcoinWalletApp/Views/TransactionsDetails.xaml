@@ -13,7 +13,7 @@
                             <Frame CornerRadius="30" Padding="0" BackgroundColor="#353D40" Margin="10">
                                 <FlexLayout JustifyContent="SpaceAround" Direction="Row" AlignItems="Center" >
                                     <Label Text="{Binding AmountOfTransaction}" Style="{StaticResource header}" TextColor="#fff"/>
-                                    <Label Text="{Binding TransactionType}" Style="{StaticResource header}" TextColor="Green" />
+                                    <Label Text="{Binding TransactionType}" Style="{StaticResource header}" TextColor="{Binding TransactionTypeColor}" />
                                     <Label Text="{Binding TransactionTime}" Style="{StaticResource header}" TextColor="#fff"/>
                                 </FlexLayout>
                             </Frame>

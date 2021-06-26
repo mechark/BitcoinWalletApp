@@ -1,6 +1,7 @@
 BitcoinWalletApp.dll
 FormsViewGroup.dll
 Plugin.Media.dll
+Plugin.Permissions.dll
 Rg.Plugins.Popup.dll
 Syncfusion.Core.XForms.Android.dll
 Syncfusion.SfListView.XForms.Android.dll

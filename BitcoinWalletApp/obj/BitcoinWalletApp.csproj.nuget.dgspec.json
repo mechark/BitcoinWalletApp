@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "QBitNinja.Client": {
               "target": "Package",
               "version": "[1.0.3.52, )"

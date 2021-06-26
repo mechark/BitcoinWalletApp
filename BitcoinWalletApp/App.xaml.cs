@@ -61,6 +61,7 @@ namespace BitcoinWalletApp
                     Balance = userTotalbalance,
                     TransactionsCount = userTransactionsCount,
                     UserInfo = new UserInfo(userMainPubKey),
+                    CoinType = " BTC"
                     //Тестовый режим. Удалить позднее
                     //        AmountOfTransactions = userTransactionsAmount,
                     //      TransactionDateTime = userTransactionsDateTime,
@@ -71,21 +72,48 @@ namespace BitcoinWalletApp
                 UObject.Addresses.Add(new Address()
                 {
                     PublicKey = userMainPubKey,
-                    PublicKeyBalance = userTotalbalance.ToString() + " BTC",
+                    PublicKeyBalance = userTotalbalance.ToString() + UObject.CoinType,
+                    DecimalBalance = userTotalbalance,
                     PublicKeyQRCode = UObject.GetQRKey(userMainPubKey),
                 });
 
                 UObject.Transactions.Add(new ViewModels.Transaction
                 {
-                    AmountOfTransaction = "0.00257474",
+                    AmountOfTransaction = "0.00257474" + UObject.CoinType,
                     DecimalAmountOfTransaction = 0.00257474m,
                     TransactionTime = "22.03.2020 13:39",
                     TransactionType = "Получено",
                     TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",
                     UserAddress = "3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn",
-                    ReceiverAddress = "1Gh6DKC8CDP0Ym1U78vdW0l79x"
+                    ReceiverAddress = "1Gh6DKC8CDP0Ym1U78vdW0l79x",
+                    TransactionTypeColor = Color.FromHex("#009900")
                 });
 
+                UObject.Transactions.Add(new ViewModels.Transaction
+                {
+                    AmountOfTransaction = "0.00257474" + UObject.CoinType,
+                    DecimalAmountOfTransaction = 0.00257474m,
+                    TransactionTime = "22.03.2020 13:39",
+                    TransactionType = "Получено",
+                    TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",
+                    UserAddress = "3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn",
+                    ReceiverAddress = "1Gh6DKC8CDP0Ym1U78vdW0l79x",
+                    TransactionTypeColor = Color.FromHex("#009900")
+                });
+
+                UObject.Transactions.Add(new ViewModels.Transaction
+                {
+                    AmountOfTransaction = "0.00257474" + UObject.CoinType,
+                    DecimalAmountOfTransaction = 0.00257474m,
+                    TransactionTime = "22.03.2020 13:39",
+                    TransactionType = "Получено",
+                    TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",
+                    UserAddress = "3JwMCMFL1edCTNxYmi52RszotYxRDm2MGn",
+                    ReceiverAddress = "1Gh6DKC8CDP0Ym1U78vdW0l79x",
+                    TransactionTypeColor = Color.FromHex("#009900")
+                });
+
+                UObject.PublicKeys.Add(userMainPubKey);
                 UObject.HasTransactions = true;
 
                 App.Current.Properties["UObject"] = UObject;

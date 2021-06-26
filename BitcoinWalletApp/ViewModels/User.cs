@@ -6,6 +6,9 @@ using Transactions;
 using System.IO;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace BitcoinWalletApp.ViewModels
 {
@@ -26,11 +29,15 @@ namespace BitcoinWalletApp.ViewModels
 
         public Dictionary<string, string> Keys { get; set; }
 
+        public ObservableCollection<string> PublicKeys { get; set; } = new ObservableCollection<string>();
+
         public ObservableCollection<Address> Addresses { get; set; } = new ObservableCollection<Address>();
 
         public decimal Balance { get; set; }
 
-        public string CoinType { get; set; } = "BTC";
+        public string CoinType { get; set; }
+
+        public int TabHeight { get; set; }
 
         //Transactions
 
@@ -47,6 +54,7 @@ namespace BitcoinWalletApp.ViewModels
         public List<string> TransactionDateTime { get; set; }
 
         public List<string> TransactionsHash { get; set; }
+            
 
         // Methods
 
@@ -60,6 +68,37 @@ namespace BitcoinWalletApp.ViewModels
         public decimal GetBalance (MoneyUnit moneyUnit, string userPubKey)
         {
             return UserInfo.GetUserBalance(moneyUnit, userPubKey);
+        }
+
+        public async Task<string> ChangeCoinTypeAsync()
+        {
+            return await Task.Run(() =>
+            {
+                foreach (Transaction transaction in Transactions)
+                {
+                    foreach (Address address in Addresses)
+                    {
+                        if (CoinType == "Sat")
+                        {
+                            transaction.AmountOfTransaction = (transaction.DecimalAmountOfTransaction * 100000).ToString() + " sat";
+                            address.PublicKeyBalance = (address.DecimalBalance * 100000).ToString() + " sat";
+                        }
+                        else if (CoinType == "mBTC")
+                        {
+                            transaction.AmountOfTransaction = (transaction.DecimalAmountOfTransaction * 1000).ToString() + " mBTC";
+                            address.PublicKeyBalance = (address.DecimalBalance * 1000).ToString() + " mBTC";
+                        }
+                        else if (CoinType == "BTC")
+                        {
+                            transaction.AmountOfTransaction = transaction.DecimalAmountOfTransaction + " BTC";
+                            address.PublicKeyBalance = address.DecimalBalance + " BTC";
+                        }
+                    }
+
+                }
+
+                return "";
+            });
         }
     }
 }

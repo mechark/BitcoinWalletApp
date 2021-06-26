@@ -16,10 +16,10 @@ namespace BitcoinWalletApp.Views.Popups
         {
             InitializeComponent();
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SaveImageProgressBar.ProgressTo(1.0, 8000, Easing.SpringOut);
         }
 
         protected override void OnDisappearing()
@@ -87,7 +87,6 @@ namespace BitcoinWalletApp.Views.Popups
         {
             // Return false if you don't want to close this popup page when a background of the popup page is clicked
             return base.OnBackgroundClicked();
-
         }
     }
 }

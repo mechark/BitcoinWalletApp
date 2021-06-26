@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace BitcoinWalletApp.Views.TabbedPages
 {
@@ -18,8 +19,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
     public partial class SendPage : ContentPage
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
-
-        public ObservableCollection<Address> Addresses { get; protected set; } = new ObservableCollection<Address>();
 
         private string amountToSend;
 
@@ -39,15 +38,15 @@ namespace BitcoinWalletApp.Views.TabbedPages
         public SendPage()
         {
             InitializeComponent();
-            Addresses = User.Addresses;
 
+            AddressPicker.ItemsSource = User.PublicKeys;
             SizeChanged += PageSizeChange;
             BindingContext = this;
         }
 
         void PageSizeChange(object sender, EventArgs e)
         {
-            MainFrame.HeightRequest = DisplayHeight / 1;
+            MainFrame.HeightRequest = DisplayHeight / 3.366906474820144;
         }
 
         private async void Button_SendCoins(object sender, EventArgs e)
@@ -75,8 +74,14 @@ namespace BitcoinWalletApp.Views.TabbedPages
                     AmountOfTransaction = sumToSend.ToString(),
                     TransactionHash = transactionHash,
                     TransactionType = "Отправлено",
-                    TransactionTime = DateTime.Now.ToString()
+                    TransactionTime = DateTime.Now.ToString(),
+                    TransactionTypeColor = Color.FromHex("#CC0033")
                 };
+
+                if (transaction.TransactionType == "Получено")
+                {
+                    transaction.TransactionTypeColor = Color.FromHex("#009900");
+                }
 
                 User.Transactions.Add(transaction);
                 User.HasTransactions = true;
@@ -124,5 +129,9 @@ namespace BitcoinWalletApp.Views.TabbedPages
             
         }
 
+        protected override void OnAppearing()
+        {
+            AddressPicker.ItemsSource = User.PublicKeys;
+        }
     }
 }

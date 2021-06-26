@@ -6,6 +6,7 @@ using Android.Content;
 using Xamarin.Forms.Platform.Android;
 using Android.Views;
 using Google.Android.Material.BottomNavigation;
+using BitcoinWalletApp;
 
 [assembly: ExportRenderer(typeof(ParentPage), typeof(MyTabbedPageRenderer))]
 namespace TabbedDemo.Droid
@@ -39,5 +40,6 @@ namespace TabbedDemo.Droid
                 }
             }
         }
+
     }
 }

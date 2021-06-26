@@ -23,6 +23,7 @@ namespace BitcoinWalletApp.Droid
         {
             base.OnElementChanged(e);
 
+            
         }
     }
 }

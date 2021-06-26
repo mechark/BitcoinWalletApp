@@ -31,8 +31,9 @@
 
             <Style x:Key="entry" TargetType="Entry">
                 <Setter Property="Margin" Value="10" />
-                <Setter Property="PlaceholderColor" Value="#f3f3f3" />
-                <Setter Property="BackgroundColor" Value="#353D40" />
+                <Setter Property="PlaceholderColor" Value="#000" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="IsTextPredictionEnabled" Value="True" />
                 <Setter Property="FontFamily" Value="Open Sans" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="14" />

@@ -247,6 +247,228 @@ namespace BitcoinWalletApp.Droid
 			global::Plugin.Media.Resource.Styleable.GradientColor_android_tileMode = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Plugin.Media.Resource.Styleable.GradientColor_android_type = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_type;
 			global::Plugin.Media.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::BitcoinWalletApp.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
+			global::Plugin.Permissions.Resource.Attribute.alpha = global::BitcoinWalletApp.Droid.Resource.Attribute.alpha;
+			global::Plugin.Permissions.Resource.Attribute.coordinatorLayoutStyle = global::BitcoinWalletApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Permissions.Resource.Attribute.font = global::BitcoinWalletApp.Droid.Resource.Attribute.font;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderAuthority = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderCerts = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchStrategy = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchTimeout = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderPackage = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderQuery = global::BitcoinWalletApp.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Permissions.Resource.Attribute.fontStyle = global::BitcoinWalletApp.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Permissions.Resource.Attribute.fontVariationSettings = global::BitcoinWalletApp.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Permissions.Resource.Attribute.fontWeight = global::BitcoinWalletApp.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Permissions.Resource.Attribute.keylines = global::BitcoinWalletApp.Droid.Resource.Attribute.keylines;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchor = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchorGravity = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Attribute.layout_behavior = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Permissions.Resource.Attribute.layout_dodgeInsetEdges = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Attribute.layout_insetEdge = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Permissions.Resource.Attribute.layout_keyline = global::BitcoinWalletApp.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Permissions.Resource.Attribute.statusBarBackground = global::BitcoinWalletApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Permissions.Resource.Attribute.ttcIndex = global::BitcoinWalletApp.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Permissions.Resource.Color.browser_actions_bg_grey = global::BitcoinWalletApp.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Permissions.Resource.Color.browser_actions_divider_color = global::BitcoinWalletApp.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_text_color = global::BitcoinWalletApp.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_title_color = global::BitcoinWalletApp.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Permissions.Resource.Color.notification_action_color_filter = global::BitcoinWalletApp.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Permissions.Resource.Color.notification_icon_bg_color = global::BitcoinWalletApp.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Permissions.Resource.Color.ripple_material_light = global::BitcoinWalletApp.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Permissions.Resource.Color.secondary_text_default_material_light = global::BitcoinWalletApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_max_width = global::BitcoinWalletApp.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_min_padding = global::BitcoinWalletApp.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_horizontal_material = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_vertical_material = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_horizontal_material = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_vertical_material = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_control_corner_material = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_height = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_width = global::BitcoinWalletApp.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_icon_size = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_text_size = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_big_circle_margin = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_content_margin_start = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_height = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_width = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_main_column_padding_top = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_media_narrow_margin = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_icon_size = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_side_padding_top = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_background_padding = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_size_as_large = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Permissions.Resource.Dimension.notification_subtext_size = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad_large_text = global::BitcoinWalletApp.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Permissions.Resource.Drawable.notification_action_background = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_normal = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_pressed = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal_pressed = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_icon_background = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_bg = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_low_bg = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_tile_bg = global::BitcoinWalletApp.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Permissions.Resource.Drawable.notify_panel_notification_icon_bg = global::BitcoinWalletApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Permissions.Resource.Id.accessibility_action_clickable_span = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_0 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_1 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_10 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_11 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_12 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_13 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_14 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_15 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_16 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_17 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_18 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_19 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_2 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_20 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_21 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_22 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_23 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_24 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_25 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_26 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_27 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_28 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_29 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_3 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_30 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_31 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_4 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_5 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_6 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_7 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_8 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_9 = global::BitcoinWalletApp.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.Permissions.Resource.Id.actions = global::BitcoinWalletApp.Droid.Resource.Id.actions;
+			global::Plugin.Permissions.Resource.Id.action_container = global::BitcoinWalletApp.Droid.Resource.Id.action_container;
+			global::Plugin.Permissions.Resource.Id.action_divider = global::BitcoinWalletApp.Droid.Resource.Id.action_divider;
+			global::Plugin.Permissions.Resource.Id.action_image = global::BitcoinWalletApp.Droid.Resource.Id.action_image;
+			global::Plugin.Permissions.Resource.Id.action_text = global::BitcoinWalletApp.Droid.Resource.Id.action_text;
+			global::Plugin.Permissions.Resource.Id.all = global::BitcoinWalletApp.Droid.Resource.Id.all;
+			global::Plugin.Permissions.Resource.Id.async = global::BitcoinWalletApp.Droid.Resource.Id.async;
+			global::Plugin.Permissions.Resource.Id.blocking = global::BitcoinWalletApp.Droid.Resource.Id.blocking;
+			global::Plugin.Permissions.Resource.Id.bottom = global::BitcoinWalletApp.Droid.Resource.Id.bottom;
+			global::Plugin.Permissions.Resource.Id.browser_actions_header_text = global::BitcoinWalletApp.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_items = global::BitcoinWalletApp.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_icon = global::BitcoinWalletApp.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_text = global::BitcoinWalletApp.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_view = global::BitcoinWalletApp.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Permissions.Resource.Id.center = global::BitcoinWalletApp.Droid.Resource.Id.center;
+			global::Plugin.Permissions.Resource.Id.center_horizontal = global::BitcoinWalletApp.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Permissions.Resource.Id.center_vertical = global::BitcoinWalletApp.Droid.Resource.Id.center_vertical;
+			global::Plugin.Permissions.Resource.Id.chronometer = global::BitcoinWalletApp.Droid.Resource.Id.chronometer;
+			global::Plugin.Permissions.Resource.Id.clip_horizontal = global::BitcoinWalletApp.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Permissions.Resource.Id.clip_vertical = global::BitcoinWalletApp.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Permissions.Resource.Id.dialog_button = global::BitcoinWalletApp.Droid.Resource.Id.dialog_button;
+			global::Plugin.Permissions.Resource.Id.end = global::BitcoinWalletApp.Droid.Resource.Id.end;
+			global::Plugin.Permissions.Resource.Id.fill = global::BitcoinWalletApp.Droid.Resource.Id.fill;
+			global::Plugin.Permissions.Resource.Id.fill_horizontal = global::BitcoinWalletApp.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Permissions.Resource.Id.fill_vertical = global::BitcoinWalletApp.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Permissions.Resource.Id.forever = global::BitcoinWalletApp.Droid.Resource.Id.forever;
+			global::Plugin.Permissions.Resource.Id.icon = global::BitcoinWalletApp.Droid.Resource.Id.icon;
+			global::Plugin.Permissions.Resource.Id.icon_group = global::BitcoinWalletApp.Droid.Resource.Id.icon_group;
+			global::Plugin.Permissions.Resource.Id.info = global::BitcoinWalletApp.Droid.Resource.Id.info;
+			global::Plugin.Permissions.Resource.Id.italic = global::BitcoinWalletApp.Droid.Resource.Id.italic;
+			global::Plugin.Permissions.Resource.Id.left = global::BitcoinWalletApp.Droid.Resource.Id.left;
+			global::Plugin.Permissions.Resource.Id.line1 = global::BitcoinWalletApp.Droid.Resource.Id.line1;
+			global::Plugin.Permissions.Resource.Id.line3 = global::BitcoinWalletApp.Droid.Resource.Id.line3;
+			global::Plugin.Permissions.Resource.Id.none = global::BitcoinWalletApp.Droid.Resource.Id.none;
+			global::Plugin.Permissions.Resource.Id.normal = global::BitcoinWalletApp.Droid.Resource.Id.normal;
+			global::Plugin.Permissions.Resource.Id.notification_background = global::BitcoinWalletApp.Droid.Resource.Id.notification_background;
+			global::Plugin.Permissions.Resource.Id.notification_main_column = global::BitcoinWalletApp.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Permissions.Resource.Id.notification_main_column_container = global::BitcoinWalletApp.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Permissions.Resource.Id.right = global::BitcoinWalletApp.Droid.Resource.Id.right;
+			global::Plugin.Permissions.Resource.Id.right_icon = global::BitcoinWalletApp.Droid.Resource.Id.right_icon;
+			global::Plugin.Permissions.Resource.Id.right_side = global::BitcoinWalletApp.Droid.Resource.Id.right_side;
+			global::Plugin.Permissions.Resource.Id.start = global::BitcoinWalletApp.Droid.Resource.Id.start;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_actions = global::BitcoinWalletApp.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_clickable_spans = global::BitcoinWalletApp.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_heading = global::BitcoinWalletApp.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_pane_title = global::BitcoinWalletApp.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.Permissions.Resource.Id.tag_screen_reader_focusable = global::BitcoinWalletApp.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.Permissions.Resource.Id.tag_transition_group = global::BitcoinWalletApp.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_event_manager = global::BitcoinWalletApp.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_listeners = global::BitcoinWalletApp.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Permissions.Resource.Id.text = global::BitcoinWalletApp.Droid.Resource.Id.text;
+			global::Plugin.Permissions.Resource.Id.text2 = global::BitcoinWalletApp.Droid.Resource.Id.text2;
+			global::Plugin.Permissions.Resource.Id.time = global::BitcoinWalletApp.Droid.Resource.Id.time;
+			global::Plugin.Permissions.Resource.Id.title = global::BitcoinWalletApp.Droid.Resource.Id.title;
+			global::Plugin.Permissions.Resource.Id.top = global::BitcoinWalletApp.Droid.Resource.Id.top;
+			global::Plugin.Permissions.Resource.Integer.status_bar_notification_info_maxnum = global::BitcoinWalletApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_page = global::BitcoinWalletApp.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_row = global::BitcoinWalletApp.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Permissions.Resource.Layout.custom_dialog = global::BitcoinWalletApp.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.Permissions.Resource.Layout.notification_action = global::BitcoinWalletApp.Droid.Resource.Layout.notification_action;
+			global::Plugin.Permissions.Resource.Layout.notification_action_tombstone = global::BitcoinWalletApp.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Permissions.Resource.Layout.notification_template_custom_big = global::BitcoinWalletApp.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Permissions.Resource.Layout.notification_template_icon_group = global::BitcoinWalletApp.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_chronometer = global::BitcoinWalletApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_time = global::BitcoinWalletApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Permissions.Resource.String.status_bar_notification_info_overflow = global::BitcoinWalletApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification = global::BitcoinWalletApp.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Info = global::BitcoinWalletApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::BitcoinWalletApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Time = global::BitcoinWalletApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Title = global::BitcoinWalletApp.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionContainer = global::BitcoinWalletApp.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionText = global::BitcoinWalletApp.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Permissions.Resource.Style.Widget_Support_CoordinatorLayout = global::BitcoinWalletApp.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem = global::BitcoinWalletApp.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_alpha = global::BitcoinWalletApp.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_alpha = global::BitcoinWalletApp.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_color = global::BitcoinWalletApp.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_keylines = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::BitcoinWalletApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_font = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontStyle = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontWeight = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_font = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontStyle = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontWeight = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_ttcIndex = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderAuthority = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderCerts = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderPackage = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderQuery = global::BitcoinWalletApp.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_color = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_offset = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerColor = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerX = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerY = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endColor = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endX = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endY = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_gradientRadius = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startColor = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startX = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startY = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_tileMode = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_type = global::BitcoinWalletApp.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Permissions.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::BitcoinWalletApp.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::BitcoinWalletApp.Droid.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::BitcoinWalletApp.Droid.Resource.Animation.abc_fade_out;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::BitcoinWalletApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -14527,280 +14749,283 @@ namespace BitcoinWalletApp.Droid
 			public const int abc_vector_test = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int Avatar1 = 2131165276;
+			public const int addressesbook = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int Avatar10 = 2131165277;
+			public const int Avatar1 = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int Avatar11 = 2131165278;
+			public const int Avatar10 = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int Avatar12 = 2131165279;
+			public const int Avatar11 = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int Avatar13 = 2131165280;
+			public const int Avatar12 = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int Avatar14 = 2131165281;
+			public const int Avatar13 = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int Avatar15 = 2131165282;
+			public const int Avatar14 = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int Avatar16 = 2131165283;
+			public const int Avatar15 = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int Avatar17 = 2131165284;
+			public const int Avatar16 = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int Avatar18 = 2131165285;
+			public const int Avatar17 = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int Avatar19 = 2131165286;
+			public const int Avatar18 = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int Avatar2 = 2131165287;
+			public const int Avatar19 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int Avatar20 = 2131165288;
+			public const int Avatar2 = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Avatar21 = 2131165289;
+			public const int Avatar20 = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Avatar22 = 2131165290;
+			public const int Avatar21 = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int Avatar23 = 2131165291;
+			public const int Avatar22 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int Avatar24 = 2131165292;
+			public const int Avatar23 = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int Avatar25 = 2131165293;
+			public const int Avatar24 = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int Avatar26 = 2131165294;
+			public const int Avatar25 = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int Avatar27 = 2131165295;
+			public const int Avatar26 = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int Avatar28 = 2131165296;
+			public const int Avatar27 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int Avatar29 = 2131165297;
+			public const int Avatar28 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int Avatar3 = 2131165298;
+			public const int Avatar29 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int Avatar30 = 2131165299;
+			public const int Avatar3 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int Avatar4 = 2131165300;
+			public const int Avatar30 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int Avatar5 = 2131165301;
+			public const int Avatar4 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int Avatar6 = 2131165302;
+			public const int Avatar5 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int Avatar7 = 2131165303;
+			public const int Avatar6 = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int Avatar8 = 2131165304;
+			public const int Avatar7 = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int Avatar9 = 2131165305;
+			public const int Avatar8 = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int avd_hide_password = 2131165306;
+			public const int Avatar9 = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int avd_show_password = 2131165307;
+			public const int avd_hide_password = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int btn_checkbox_checked_mtrl = 2131165308;
+			public const int avd_show_password = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165309;
+			public const int btn_checkbox_checked_mtrl = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int btn_checkbox_unchecked_mtrl = 2131165310;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165311;
+			public const int btn_checkbox_unchecked_mtrl = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int btn_radio_off_mtrl = 2131165312;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165313;
+			public const int btn_radio_off_mtrl = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int btn_radio_on_mtrl = 2131165314;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165315;
+			public const int btn_radio_on_mtrl = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int change = 2131165316;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int clear_button_icon = 2131165317;
+			public const int change = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int design_bottom_navigation_item_background = 2131165318;
+			public const int clear_button_icon = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int design_fab_background = 2131165319;
+			public const int design_bottom_navigation_item_background = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int design_ic_visibility = 2131165320;
+			public const int design_fab_background = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int design_ic_visibility_off = 2131165321;
+			public const int design_ic_visibility = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int design_password_eye = 2131165322;
+			public const int design_ic_visibility_off = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int design_snackbar_background = 2131165323;
+			public const int design_password_eye = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int home = 2131165324;
+			public const int design_snackbar_background = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int ic_mtrl_checked_circle = 2131165325;
+			public const int home = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int ic_mtrl_chip_checked_black = 2131165326;
+			public const int ic_mtrl_checked_circle = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int ic_mtrl_chip_checked_circle = 2131165327;
+			public const int ic_mtrl_chip_checked_black = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int ic_mtrl_chip_close_circle = 2131165328;
-			
-			// aapt resource value: 0x7F070092
-			public const int inputlayout_togglecollapseicon = 2131165330;
-			
-			// aapt resource value: 0x7F070093
-			public const int inputlayout_togglevisibleicon = 2131165331;
+			public const int ic_mtrl_chip_checked_circle = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int input_layout_drop_down_icon = 2131165329;
+			public const int ic_mtrl_chip_close_circle = 2131165329;
+			
+			// aapt resource value: 0x7F070093
+			public const int inputlayout_togglecollapseicon = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int MainIcon = 2131165332;
+			public const int inputlayout_togglevisibleicon = 2131165332;
+			
+			// aapt resource value: 0x7F070092
+			public const int input_layout_drop_down_icon = 2131165330;
 			
 			// aapt resource value: 0x7F070095
-			public const int material_ic_calendar_black_24dp = 2131165333;
+			public const int MainIcon = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int material_ic_clear_black_24dp = 2131165334;
+			public const int material_ic_calendar_black_24dp = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int material_ic_edit_black_24dp = 2131165335;
+			public const int material_ic_clear_black_24dp = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165336;
+			public const int material_ic_edit_black_24dp = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165337;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165338;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165339;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int mtrl_dialog_background = 2131165340;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int mtrl_dropdown_arrow = 2131165341;
+			public const int mtrl_dialog_background = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int mtrl_ic_arrow_drop_down = 2131165342;
+			public const int mtrl_dropdown_arrow = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int mtrl_ic_arrow_drop_up = 2131165343;
+			public const int mtrl_ic_arrow_drop_down = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int mtrl_ic_cancel = 2131165344;
+			public const int mtrl_ic_arrow_drop_up = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int mtrl_ic_error = 2131165345;
+			public const int mtrl_ic_cancel = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int mtrl_popupmenu_background = 2131165346;
+			public const int mtrl_ic_error = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int mtrl_popupmenu_background_dark = 2131165347;
+			public const int mtrl_popupmenu_background = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int mtrl_tabs_default_indicator = 2131165348;
+			public const int mtrl_popupmenu_background_dark = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int navigation_empty_icon = 2131165349;
+			public const int mtrl_tabs_default_indicator = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int notification_action_background = 2131165350;
+			public const int navigation_empty_icon = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int notification_bg = 2131165351;
+			public const int notification_action_background = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int notification_bg_low = 2131165352;
+			public const int notification_bg = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int notification_bg_low_normal = 2131165353;
+			public const int notification_bg_low = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int notification_bg_low_pressed = 2131165354;
+			public const int notification_bg_low_normal = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int notification_bg_normal = 2131165355;
+			public const int notification_bg_low_pressed = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int notification_bg_normal_pressed = 2131165356;
+			public const int notification_bg_normal = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int notification_icon_background = 2131165357;
+			public const int notification_bg_normal_pressed = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int notification_template_icon_bg = 2131165358;
+			public const int notification_icon_background = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int notification_template_icon_low_bg = 2131165359;
+			public const int notification_template_icon_bg = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int notification_tile_bg = 2131165360;
+			public const int notification_template_icon_low_bg = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int notify_panel_notification_icon_bg = 2131165361;
+			public const int notification_tile_bg = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int receive = 2131165362;
+			public const int notify_panel_notification_icon_bg = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int send = 2131165363;
+			public const int receive = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int test_custom_background = 2131165364;
+			public const int send = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int tooltip_frame_dark = 2131165365;
+			public const int test_custom_background = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int tooltip_frame_light = 2131165366;
+			public const int tooltip_frame_dark = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int transactions = 2131165367;
+			public const int tooltip_frame_light = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int transactions = 2131165368;
 			
 			static Drawable()
 			{

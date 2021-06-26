@@ -14,7 +14,7 @@
             </Label>
             <ActivityIndicator IsRunning="False" x:Name="AddingAddressIndincator" Color="#fff" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="False"/>
             <StackLayout>
-                <ListView HasUnevenRows="True" ItemTapped="ListView_ItemTapped" x:Name="AddressesList" IsPullToRefreshEnabled="True">
+                <ListView HasUnevenRows="True" ItemTapped="ListView_ItemTapped" x:Name="AddressesList" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

@@ -12,6 +12,7 @@ namespace BitcoinWalletApp.ViewModels
 
         public string PublicKey { get; set; }
         public string PublicKeyBalance { get; set; }
+        public decimal DecimalBalance { get; set; }
         public ImageSource PublicKeyQRCode { get; set; }
         public string PublicKeyNumberOfTransactions { get; set; }
 

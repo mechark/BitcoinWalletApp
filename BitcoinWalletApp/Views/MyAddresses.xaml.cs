@@ -18,10 +18,6 @@ namespace BitcoinWalletApp.Views
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
 
-        private bool _IsFirst = true;
-
-        private bool IsFirst { get => _IsFirst; set => _IsFirst = value; }
-
         public ICommand AddAddress => new Command(AddPubKey);
 
         public MyAddresses()
@@ -29,12 +25,6 @@ namespace BitcoinWalletApp.Views
             InitializeComponent();
             AddressesList.ItemsSource = User.Addresses;
 
-       /*     if (IsFirst)
-            {
-                AdressesInformationInitialize();
-                IsFirst = false;
-            } */
-            
             BindingContext = this;
         }
 
@@ -43,18 +33,21 @@ namespace BitcoinWalletApp.Views
             Navigation.PushPopupAsync(new AddressDetails_Popup(e.ItemIndex));
         }
 
+        protected override void OnAppearing()
+        {
+            AddressesList.ItemsSource = null;
+            AddressesList.ItemsSource = User.Addresses;
+        }
+
         private async void AddPubKey()
         {
-
-                AddingAddressIndincator.IsRunning = true;
-                AddingAddressIndincator.IsVisible = true;
+            AddingAddressIndincator.IsRunning = true;
+            AddingAddressIndincator.IsVisible = true;
 
             await AddPubKeyAsync();
 
-                AddingAddressIndincator.IsRunning = false;
-                AddingAddressIndincator.IsVisible = false;
-
-
+            AddingAddressIndincator.IsRunning = false;
+            AddingAddressIndincator.IsVisible = false;
         }
 
         private async Task<string> AddPubKeyAsync()
@@ -65,6 +58,7 @@ namespace BitcoinWalletApp.Views
                 string privKey = User.Wallet.CreateKeys(Network.Main)["privKey"];
 
                 User.Keys.Add(address, privKey);
+                User.PublicKeys.Add(address);
 
                 User.Addresses.Add(new Address()
                 {

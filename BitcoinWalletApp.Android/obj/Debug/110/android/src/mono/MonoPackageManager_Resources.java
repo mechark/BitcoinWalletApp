@@ -12,6 +12,7 @@ public class MonoPackageManager_Resources {
 		"NBitcoin.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.Media.dll",
+		"Plugin.Permissions.dll",
 		"QBitNinja.Client.dll",
 		"QRCoder.dll",
 		"RestSharp.dll",

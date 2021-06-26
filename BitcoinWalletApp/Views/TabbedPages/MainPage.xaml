@@ -6,14 +6,13 @@
             
         <ContentPage.Content>
             <StackLayout>
-                <FlexLayout Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center">
-                    <Button Text="Обновить" TextColor="#fff" BackgroundColor="#003F63" Clicked="Refresh_Clicked"/>
-                <Label Text="BTC" BackgroundColor="#003F63" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None" Margin="5">
+                <StackLayout x:Name="TopBar" HeightRequest="48">
+                <Label Text="BTC" BackgroundColor="#003F63" TextColor="#fff" HorizontalOptions="End" x:Name="ChangeCoin" TextTransform="None" VerticalTextAlignment="Center" Margin="10">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding ChangeType}"/>
                     </Label.GestureRecognizers>
                 </Label>
-            </FlexLayout>
+            </StackLayout>
                 <FlexLayout Direction="Column">
                     <Frame BackgroundColor="#fff" CornerRadius="30" x:Name="MainFrame">
                         <FlexLayout Direction="Column">
@@ -39,29 +38,29 @@
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout x:Name="UserRecentTransactions" Margin="0, 20, 0, 0" >
-                                <Frame BackgroundColor="#353D40" CornerRadius="10" >
-                                <StackLayout VerticalOptions="FillAndExpand">
+                                <Frame BackgroundColor="#353D40" CornerRadius="10">
+                                <StackLayout>
                                     <FlexLayout JustifyContent="SpaceBetween">
                                         <Label Text="Недавние транзакции" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium"/>
-                                        <Label Text="Все" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium">
+                                        <Label Text="Все" Style="{StaticResource header}" TextColor="#fff" FontSize="Medium" >
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding AllTransactionsShowCommand}" />
                                             </Label.GestureRecognizers>
                                         </Label>
                                     </FlexLayout>
-                                    <ListView x:Name="UserRecentTransaction" Margin="0, 10, 0, 0" SeparatorColor="#fff" HeightRequest="60">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell>
-                                                    <StackLayout Orientation="Horizontal" >
-                                                        <Label Text="{Binding AmountOfTransaction}" Style="{StaticResource header}" TextColor="#fff"/>
-                                                        <Label Text="{Binding TransactionType}" Style="{StaticResource header}" TextColor="#fff"/>
-                                                        <Label Text="{Binding TransactionTime}" Style="{StaticResource header}" TextColor="#fff"/>
-                                                    </StackLayout>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                                        <ListView x:Name="UserRecentTransaction" Margin="0, 10, 0, 10" SeparatorColor="#fff">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <FlexLayout JustifyContent="SpaceAround" AlignItems="Center" >
+                                                            <Label Text="{Binding AmountOfTransaction}" Style="{StaticResource header}" TextColor="#fff" FontSize="14" />
+                                                            <Label Text="{Binding TransactionType}" Style="{StaticResource header}" TextColor="{Binding TransactionTypeColor}" FontSize="14"/>
+                                                            <Label Text="{Binding TransactionTime}" Style="{StaticResource header}" TextColor="#fff" FontSize="14"/>
+                                                        </FlexLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
                                 </StackLayout>
                             </Frame>
                             </StackLayout>

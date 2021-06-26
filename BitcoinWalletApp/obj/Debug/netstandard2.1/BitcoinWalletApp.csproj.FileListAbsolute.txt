@@ -15,7 +15,6 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\T
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Forms.Platform.Android.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Google.Android.Material.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\FormsViewGroup.pdb
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.csproj.AssemblyReference.cache
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\App.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\MyAddresses.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\ParentPage.xaml.g.cs
@@ -35,3 +34,4 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\B
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\ref\BitcoinWalletApp.dll
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.pdb
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\BitcoinWalletApp.csproj.AssemblyReference.cache
