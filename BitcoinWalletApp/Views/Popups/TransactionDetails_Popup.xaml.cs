@@ -20,6 +20,10 @@ namespace BitcoinWalletApp.Views.Popups
 
         public Transaction Transaction { get; set; }
 
+        public ICommand CopyHashCommand => new Command(CopyHash_Clicked);
+        public ICommand CopyFromSendCommand => new Command(CopyFromSend_Clicked);
+        public ICommand CopyToSendCommand => new Command(CopyToSend_Clicked);
+
         public TransactionDetails_Popup(int selectedItemIndex)
         {
             Transaction = User.Transactions[selectedItemIndex];
@@ -34,9 +38,12 @@ namespace BitcoinWalletApp.Views.Popups
             TypeLabel.TextColor = Transaction.TransactionTypeColor;
 
             MainFrame.HeightRequest = Details.Height;
+            BindingContext = this;
         }
 
-
+        private void CopyHash_Clicked () => User.CopySomething(HashLabel.Text);
+        private void CopyFromSend_Clicked () => User.CopySomething(FromLabel.Text);
+        private void CopyToSend_Clicked () => User.CopySomething(ToLabel.Text);
 
         protected override void OnAppearing()
         {

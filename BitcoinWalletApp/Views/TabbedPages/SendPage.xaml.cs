@@ -133,5 +133,10 @@ namespace BitcoinWalletApp.Views.TabbedPages
         {
             AddressPicker.ItemsSource = User.PublicKeys;
         }
+
+        private void AmountToSend_Completed(object sender, EventArgs e)
+        {
+            AmountToSend.Text = AmountToSend.Text + " sat";
+        }
     }
 }

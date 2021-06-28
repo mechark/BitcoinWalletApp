@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -22,8 +23,8 @@ namespace BitcoinWalletApp.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
             base.OnElementChanged(e);
+            Control.BackgroundTintList = ColorStateList.ValueOf(Android.Graphics.Color.Black);
 
-            
         }
     }
 }

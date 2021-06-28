@@ -20,11 +20,19 @@
         <Frame x:Name="MainFrame" VerticalOptions="Center" HorizontalOptions="Center" CornerRadius="30">
             <StackLayout x:Name="Details">
                 <StackLayout HorizontalOptions="Center">
-                    <Image x:Name="AddressQRCode"/>
+                    <Image x:Name="AddressQRCode" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DownloadQRCodeCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Адрес: " Style="{StaticResource header}" />
-                    <Label x:Name="AddressLabel" Style="{StaticResource header}" />
+                    <Label x:Name="AddressLabel" Style="{StaticResource header}" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CopyAddressCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Баланс: " Style="{StaticResource header}" />

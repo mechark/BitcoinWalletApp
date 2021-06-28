@@ -25,9 +25,6 @@ namespace BitcoinWalletApp.Views
             BindingContext = this;
         }
 
-        private void TransactionsList_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
-        }
+        private void TransactionsList_ItemTapped(object sender, ItemTappedEventArgs e) => Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
     }
 }

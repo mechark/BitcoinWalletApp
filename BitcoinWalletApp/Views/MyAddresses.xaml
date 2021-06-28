@@ -7,11 +7,6 @@
              BackgroundColor="#003F63">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Добавить" TextColor="#fff" HorizontalOptions="End" >
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer  Command="{Binding AddAddress}"/>
-                </Label.GestureRecognizers>
-            </Label>
             <ActivityIndicator IsRunning="False" x:Name="AddingAddressIndincator" Color="#fff" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="False"/>
             <StackLayout>
                 <ListView HasUnevenRows="True" ItemTapped="ListView_ItemTapped" x:Name="AddressesList" SeparatorVisibility="None">
@@ -39,6 +34,13 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
+            <Frame CornerRadius="50" HorizontalOptions="Center" Margin="10" BorderColor="#fff" BackgroundColor="Transparent">
+                <Label Text="+" Style="{StaticResource header}" FontSize="30"  Margin="-5, -20, -5, -20" TextColor="#fff">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding AddAddress}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

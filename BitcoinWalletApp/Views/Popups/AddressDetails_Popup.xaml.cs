@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BitcoinWalletApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Windows.Input;
 
 namespace BitcoinWalletApp.Views.Popups
 {
@@ -17,6 +18,10 @@ namespace BitcoinWalletApp.Views.Popups
 
         private Address Address { get; set; }
 
+        public ICommand CopyAddressCommand => new Command(CopyAddress_Clicked);
+
+        public ICommand DownloadQRCodeCommand => new Command(SaveImage_Clicked);
+
         public AddressDetails_Popup(int addressIndex)
         {
             InitializeComponent();
@@ -25,7 +30,13 @@ namespace BitcoinWalletApp.Views.Popups
             AddressQRCode.Source = Address.PublicKeyQRCode;
             AddressLabel.Text = Address.PublicKey;
             BalanceLabel.Text = Address.PublicKeyBalance;
+
+            BindingContext = this;
         }
+
+        private void CopyAddress_Clicked() => User.CopySomething(Address.PublicKey);
+
+        private void SaveImage_Clicked() => User.SaveImage(Address.PublicKey);
 
         protected override void OnAppearing()
         {

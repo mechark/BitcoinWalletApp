@@ -146,33 +146,14 @@ namespace BitcoinWalletApp.Views.TabbedPages
             }
         }
 
-        private void SaveQRImage()
-        {
-            byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(User.MainPubKey);
+        private void SaveQRImage() => User.SaveImage(User.MainPubKey);
 
-            DependencyService.Get<IMediaSave>().SavePicture(keyQRCodeBytes, "PublicKey" + User.MainPubKey);
-            Navigation.PushPopupAsync(new DownloadQRImagePopup());
-            Navigation.PopPopupAsync(true);
-        }
+        private void MyAddresses_Clicked (object sender, EventArgs e) => Navigation.PushAsync(new MyAddresses(), true);
 
-        private void MyAddresses_Clicked (object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MyAddresses(), true);
-        }
+        private void Copy_Clicked() => User.CopySomething(User.MainPubKey);
 
-        private void Copy_Clicked()
-        {
-            if (Clipboard.GetTextAsync().ToString() != User.MainPubKey)
-            {
-                Clipboard.SetTextAsync(User.MainPubKey);
-                Navigation.PushPopupAsync(new CopyPopup(), true);
-                Navigation.PopPopupAsync(true);
-            }
-        }
+        private void AllTransactionsShow() => Navigation.PushAsync(new TransactionsDetails(), true);
 
-        private void AllTransactionsShow()
-        {
-            Navigation.PushAsync(new TransactionsDetails(), true);
-        }
+        private void UserRecentTransaction_ItemTapped(object sender, ItemTappedEventArgs e) => Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
     }
 }

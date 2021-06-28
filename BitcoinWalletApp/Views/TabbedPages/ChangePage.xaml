@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BitcoinWalletApp.Views.TabbedPages.ChangePage">
     <ContentPage.Content>
-        <StackLayout>
-            <WebView Source="https://www.moonpay.com/" WidthRequest="1000" HeightRequest="1000" />
-        </StackLayout>
+            <StackLayout>
+                <WebView Source="https://www.moonpay.com/" WidthRequest="1000" HeightRequest="1000" />
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

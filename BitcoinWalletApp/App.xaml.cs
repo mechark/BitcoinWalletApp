@@ -79,8 +79,8 @@ namespace BitcoinWalletApp
 
                 UObject.Transactions.Add(new ViewModels.Transaction
                 {
-                    AmountOfTransaction = "0.00257474" + UObject.CoinType,
-                    DecimalAmountOfTransaction = 0.00257474m,
+                    AmountOfTransaction = "0.05697258" + UObject.CoinType,
+                    DecimalAmountOfTransaction = 0.05697258m,
                     TransactionTime = "22.03.2020 13:39",
                     TransactionType = "Получено",
                     TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",
@@ -103,8 +103,8 @@ namespace BitcoinWalletApp
 
                 UObject.Transactions.Add(new ViewModels.Transaction
                 {
-                    AmountOfTransaction = "0.00257474" + UObject.CoinType,
-                    DecimalAmountOfTransaction = 0.00257474m,
+                    AmountOfTransaction = "0.32257879" + UObject.CoinType,
+                    DecimalAmountOfTransaction = 0.32257879m,
                     TransactionTime = "22.03.2020 13:39",
                     TransactionType = "Получено",
                     TransactionHash = "d58aaa60033f9bc51d110b5e30d817c385ec3b1d1b2bc8274567247acec19ee4",

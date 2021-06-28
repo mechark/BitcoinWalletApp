@@ -670,3 +670,5 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\andr
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\assets\Plugin.Permissions.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\jl\703ef43d-6d68-4e9e-a78d-f2f42d76c80c.jar
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\androidx\proguard\bbce2a9d-c2fd-450e-be65-c9adb631b84e.cfg
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64d8e59370ea18b869\MyEntryRenderer.java
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp.Android\obj\Debug\110\android\src\crc64d8e59370ea18b869\MyListViewRenderer.java

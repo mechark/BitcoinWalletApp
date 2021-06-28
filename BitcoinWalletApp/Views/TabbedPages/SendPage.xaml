@@ -8,21 +8,18 @@
             <ImageButton Source="addressesbook.png" BackgroundColor="#003F63" HorizontalOptions="End"  Margin="9"/>
             <Frame x:Name="MainFrame" BackgroundColor="#fff" CornerRadius="30">
                 <StackLayout>
-                    <Picker x:Name="AddressPicker" 
-                            BackgroundColor="#fff" 
-                            Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold" TextColor="#000"/>
                     <StackLayout>
-                        <StackLayout Margin="0, 20, 0, 0">
-                            <Label Text="Адрес получателя" Style="{StaticResource header}" FontSize="Large" HorizontalOptions="Center"/>
-                            <Entry Placeholder="Введите адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" />
-                            <Label Text="Сумма отправки" Style="{StaticResource header}" FontSize="Large" HorizontalOptions="Center"/>
-                            <Entry Keyboard="Numeric" Placeholder="0,00 sat" x:Name="AmountToSend" PlaceholderColor="#fff" BackgroundColor="#353D40" Style="{StaticResource entry}"
+                        <Picker x:Name="AddressPicker"  
+                            Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold" TextColor="#000"/>
+                        <StackLayout >
+                            <Entry Placeholder="Адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" FontSize="18"/>
+                            <Entry Keyboard="Numeric" Placeholder="0,00 sat" x:Name="AmountToSend" PlaceholderColor="#000" Style="{StaticResource entry}" ClearButtonVisibility="WhileEditing"
                                Text="{Binding SumToSend}"
-                               TextColor="#fff"
                                MaxLength="11"
-                               TextChanged="AmountToSend_TextChanged" />
+                               TextChanged="AmountToSend_TextChanged"
+                                   />
                         </StackLayout>
-                        <Button Text="Отправить" Style="{StaticResource button}" Clicked="Button_SendCoins"/>
+                        <Button Text="Отправить" Style="{StaticResource button}" Clicked="Button_SendCoins" VerticalOptions="CenterAndExpand" />
                     </StackLayout>
                 </StackLayout>
             </Frame>
