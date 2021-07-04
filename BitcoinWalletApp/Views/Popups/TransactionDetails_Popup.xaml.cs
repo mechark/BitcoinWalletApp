@@ -10,15 +10,19 @@ using QRCodeKeys;
 using BitcoinWalletApp.ViewModels;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
+using System.Xml.Serialization;
+using System.IO;
+using BitcoinWalletApp.Repos;
+using BitcoinWalletApp.Models;
 
 namespace BitcoinWalletApp.Views.Popups
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TransactionDetails_Popup : PopupPage
     {
-        protected static User User { get => App.Current.Properties["UObject"] as User; }
+        private User User { get => App.Current.Properties["UObject"] as User; }
 
-        public Transaction Transaction { get; set; }
+        public TransactionModel Transaction { get; set; }
 
         public ICommand CopyHashCommand => new Command(CopyHash_Clicked);
         public ICommand CopyFromSendCommand => new Command(CopyFromSend_Clicked);
@@ -26,24 +30,24 @@ namespace BitcoinWalletApp.Views.Popups
 
         public TransactionDetails_Popup(int selectedItemIndex)
         {
-            Transaction = User.Transactions[selectedItemIndex];
+            Transaction = User.TransactionsList[selectedItemIndex];
             InitializeComponent();
 
             HashLabel.Text = Transaction.TransactionHash.Substring(0, 22) + "...";
-            FromLabel.Text = Transaction.UserAddress.Substring(0, 25) + "...";
-            ToLabel.Text = Transaction.ReceiverAddress.Substring(0, 25) + "...";
-            AmountLabel.Text = Transaction.AmountOfTransaction;
+            FromLabel.Text = Transaction.UserAddress.Substring(0, 22) + "...";
+            ToLabel.Text = Transaction.ReceiverAddress.Substring(0, 22) + "...";
+            AmountLabel.Text = Transaction.StringAmount;
             TimeLabel.Text = Transaction.TransactionTime;
             TypeLabel.Text = Transaction.TransactionType;
-            TypeLabel.TextColor = Transaction.TransactionTypeColor;
+            TypeLabel.TextColor = Color.FromHex("#CC0033");
 
             MainFrame.HeightRequest = Details.Height;
             BindingContext = this;
         }
 
-        private void CopyHash_Clicked () => User.CopySomething(HashLabel.Text);
-        private void CopyFromSend_Clicked () => User.CopySomething(FromLabel.Text);
-        private void CopyToSend_Clicked () => User.CopySomething(ToLabel.Text);
+        private void CopyHash_Clicked () => User.CopySomething(Transaction.TransactionHash);
+        private void CopyFromSend_Clicked () => User.CopySomething(Transaction.UserAddress);
+        private void CopyToSend_Clicked () => User.CopySomething(Transaction.ReceiverAddress);
 
         protected override void OnAppearing()
         {

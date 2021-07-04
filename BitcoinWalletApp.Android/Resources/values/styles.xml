@@ -16,4 +16,5 @@
     <!--<item name="colorAccent">#FF4081</item>-->
   </style>
 	<color name="ListViewHighlighted" >#f3f3f3</color>
+	
 </resources>

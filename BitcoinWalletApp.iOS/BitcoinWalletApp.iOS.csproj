@@ -143,6 +143,9 @@
     <PackageReference Include="Info.Blockchain.API.Standart">
       <Version>1.0.4</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+      <Version>5.0.7</Version>
+    </PackageReference>
     <PackageReference Include="NBitcoin">
       <Version>5.0.81</Version>
     </PackageReference>
@@ -157,6 +160,9 @@
     </PackageReference>
     <PackageReference Include="RestSharp">
       <Version>106.11.7</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.7.335</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
       <Version>19.1.0.67</Version>

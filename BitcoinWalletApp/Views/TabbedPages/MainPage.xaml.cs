@@ -22,6 +22,8 @@ using System.Collections.ObjectModel;
 using Android.Content.Res;
 using Android.Webkit;
 using Plugin.Permissions;
+using System.Xml.Serialization;
+using BitcoinWalletApp.Models;
 
 namespace BitcoinWalletApp.Views.TabbedPages
 {
@@ -30,32 +32,54 @@ namespace BitcoinWalletApp.Views.TabbedPages
     {
         private User User { get => App.Current.Properties["UObject"] as User; }
 
-        private ObservableCollection<ViewModels.Transaction> RecentTransactions
+           private ObservableCollection<TransactionModel> RecentTransactions
+           {
+               get
+               {
+                   ObservableCollection<TransactionModel> recentTransactions = new ObservableCollection<TransactionModel>();
+
+                   if (User.TransactionsCount > 3)
+                   {
+                       for (int transaction = 0; transaction < 4; transaction++)
+                       {
+                           recentTransactions.Add(User.TransactionsList[transaction]);
+                       }
+                   }
+                   else
+                   {
+                       for (int transaction = 0; transaction < User.TransactionsCount; transaction++)
+                       {
+                           recentTransactions.Add(User.TransactionsList[transaction]);
+                       }
+                   }
+
+                   return recentTransactions;
+               }
+           }
+        
+        public Color TransactionTypeColor { get; set; } = Color.FromHex("#CC0033");
+
+     /*   public ObservableCollection<TransactionModel> TransactionModels
         {
             get
             {
-                ObservableCollection<ViewModels.Transaction> recentTransactions = new ObservableCollection<ViewModels.Transaction>();
-                
-                if (User.Transactions.Count > 3)
+                ObservableCollection<TransactionModel> transactionModels = new ObservableCollection<TransactionModel>();
+
+                foreach (TransactionModel transactionModel in User.GetAllTransaction())
                 {
-                    for (int transaction = 0; transaction < 4; transaction++)
+                    TransactionTypeColor = Color.FromHex("#CC0033");
+
+                    if (transactionModel.TransactionType == "Получено")
                     {
-                        recentTransactions.Add(User.Transactions[transaction]);
+                        TransactionTypeColor = Color.FromHex("#009900");
                     }
                 }
-                else
-                {
-                    for (int transaction = 0; transaction < User.Transactions.Count; transaction++)
-                    {
-                        recentTransactions.Add(User.Transactions[transaction]);
-                    }
-                }
-                
-                return recentTransactions;
             }
         }
-
+     */
         private double DisplayHeight { get => DeviceDisplay.MainDisplayInfo.Height; }
+
+        public string CoinType { get => Settings.CoinType; }
 
         public ICommand CopyAddressCommand => new Command(Copy_Clicked);
 
@@ -71,47 +95,53 @@ namespace BitcoinWalletApp.Views.TabbedPages
             SizeChanged += PageSizeChange;
             UserInitialize(MoneyUnit.BTC);
 
-            UserRecentTransaction.ItemsSource = RecentTransactions;
+          //  UserRecentTransaction.ItemsSource = RecentTransactions;
+            StoragePermission();
             BindingContext = this;
         }
 
         void PageSizeChange (object sender, EventArgs e)
         {
             MainFrame.HeightRequest = DisplayHeight / 3.366906474820144;
-            UserRecentTransaction.HeightRequest = DisplayHeight / 16.83453237410072;
             UserPubKey.FontSize = DisplayHeight / 146.25;
-            MyAddresses.Padding = DisplayHeight / 156;
-            UserInitialize(MoneyUnit.BTC);
 
+            if (!User.HasTransactions)
+            {
+                UserRecentTransactionWrapper.HeightRequest = 50;
+                UserRecentTransaction.IsVisible = false;
+            }
+            else
+            {
+                UserRecentTransaction.ItemsSource = RecentTransactions;
+            }
+
+            UserInitialize(MoneyUnit.BTC);
         }
 
-        //Methods
-        public async void UserInitialize(MoneyUnit moneyUnit)
+        private async Task<decimal> CheckBalance(MoneyUnit moneyUnit)
         {
-            UserPubKey.Text = User.MainPubKey;
-            UserQRCodeKey.Source = User.GetQRKey(User.MainPubKey);
-            UserBalance.Text = User.Balance.ToString() + " " + moneyUnit.ToString();
-            UserRecentTransaction.ItemsSource = RecentTransactions;
+            return await Task.Run(() =>
+            {
+                decimal balance = User.GetBalance(MoneyUnit.BTC, User.PublicKey);
+                UserBalance.Text = balance.ToString() + " " + moneyUnit.ToString();
+
+                return balance;
+            });
+        }
+
+        private async void StoragePermission()
+        {
             Plugin.Permissions.Abstractions.PermissionStatus status = await CrossPermissions.Current.RequestPermissionAsync<StoragePermission>();
         }
 
-        private void Refresh_Clicked(object sender, EventArgs e)
+        //Methods
+        private void UserInitialize(MoneyUnit moneyUnit)
         {
-            // Понять работает ли обновление страницы только при обновлении данных или нет
-            UserInfo UserInfo = new UserInfo(User.MainPubKey);
-            App.Current.Properties["UserBalance"] = UserInfo.GetUserBalance(MoneyUnit.BTC, User.MainPubKey);
-
-            if (User.HasTransactions)
-            {
-                UserInfo UserInfoWithTransactoins = new UserInfo(User.MainPubKey, true);
-
-                App.Current.Properties["UserTransactionsTime"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsDateTime().ToArray());
-                App.Current.Properties["UserTransactionsSum"] = String.Join(", ", UserInfoWithTransactoins.GetUserTransactionsAmount(MoneyUnit.BTC).ToArray());
-                App.Current.Properties["UserTransactionType"] = String.Join(", ", UserInfoWithTransactoins.GetTypeOfTransaction().ToArray());
-
-                App.Current.Properties["IsFilled"] = true;
-            }
-        } 
+            UserPubKey.Text = User.PublicKey;
+            UserQRCodeKey.Source = User.GetQRKey(User.PublicKey);
+            UserBalance.Text = User.Balance.ToString() + " " + moneyUnit.ToString();
+           // UserRecentTransaction.ItemsSource = RecentTransactions;
+        }
 
         public async void ChangeCoinType()
         {
@@ -128,7 +158,6 @@ namespace BitcoinWalletApp.Views.TabbedPages
                 if (change == "Sat")
                 {
                     UserBalance.Text = (balance * 100000).ToString() + " sat";
-
                 }
                 else if (change == "mBTC")
                 {
@@ -146,14 +175,18 @@ namespace BitcoinWalletApp.Views.TabbedPages
             }
         }
 
-        private void SaveQRImage() => User.SaveImage(User.MainPubKey);
+        private void SaveQRImage() => User.SaveImage(User.PublicKey);
 
-        private void MyAddresses_Clicked (object sender, EventArgs e) => Navigation.PushAsync(new MyAddresses(), true);
-
-        private void Copy_Clicked() => User.CopySomething(User.MainPubKey);
+        private void Copy_Clicked() => User.CopySomething(User.PublicKey);
 
         private void AllTransactionsShow() => Navigation.PushAsync(new TransactionsDetails(), true);
 
-        private void UserRecentTransaction_ItemTapped(object sender, ItemTappedEventArgs e) => Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
+        private void UserRecentTransaction_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var list = (ListView)sender;
+            Navigation.PushPopupAsync(new TransactionDetails_Popup(e.ItemIndex));
+            list.SelectedItem = null;
+        }
+
     }
 }

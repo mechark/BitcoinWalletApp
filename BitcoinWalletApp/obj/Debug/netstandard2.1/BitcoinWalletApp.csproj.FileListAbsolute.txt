@@ -16,11 +16,12 @@ C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\X
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\Xamarin.Google.Android.Material.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\bin\Debug\netstandard2.1\FormsViewGroup.pdb
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\App.xaml.g.cs
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\MyAddresses.xaml.g.cs
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\AddressesBook.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\ParentPage.xaml.g.cs
-C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\AddressDetails_Popup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\CopyPopup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\DownloadQRImagePopup.xaml.g.cs
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\FailureTransaction_Popup.xaml.g.cs
+C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\SuccessfullTransaction_AddressesBook_Popup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\Popups\TransactionDetails_Popup.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\TabbedPages\ChangePage.xaml.g.cs
 C:\BitcoinWalletApp\BitcoinWalletApp\BitcoinWalletApp\obj\Debug\netstandard2.1\Views\TabbedPages\MainPage.xaml.g.cs

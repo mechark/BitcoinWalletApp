@@ -29,7 +29,7 @@
                 </Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label TextColor="#fff" Text="Откуда:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" Text="Отправитель:" Style="{StaticResource header}"/>
                 <Label TextColor="#fff" x:Name="FromLabel" Style="{StaticResource header}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding CopyFromSendCommand}" />
@@ -37,7 +37,7 @@
                 </Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label TextColor="#fff" Text="Куда:" Style="{StaticResource header}"/>
+                <Label TextColor="#fff" Text="Получатель:" Style="{StaticResource header}"/>
                 <Label TextColor="#fff" x:Name="ToLabel" Style="{StaticResource header}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding CopyToSendCommand}" />

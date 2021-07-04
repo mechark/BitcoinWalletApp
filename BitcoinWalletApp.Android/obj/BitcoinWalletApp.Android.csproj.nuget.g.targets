@@ -53,5 +53,6 @@
     <Import Project="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\xamarin.forms\5.0.0.2012\buildTransitive\Xamarin.Forms.targets" Condition="Exists('C:\Program Files (x86)\Microsoft\Xamarin\NuGet\xamarin.forms\5.0.0.2012\buildTransitive\Xamarin.Forms.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.annotations\28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.annotations\28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.collections\28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Collections.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.collections\28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Collections.targets')" />
+    <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\EntityFramework.targets" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\EntityFramework.targets')" />
   </ImportGroup>
 </Project>

@@ -8,67 +8,59 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 using Rg.Plugins.Popup.Extensions;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Android.Content.Res;
 using BitcoinWalletApp.Views.Popups;
+using System.Runtime.Serialization;
+using BitcoinWalletApp.Repos;
+using BitcoinWalletApp.Models;
 
 namespace BitcoinWalletApp.ViewModels
 {
-    [Serializable]
     public class User
     {
-        public User() { }
+        public User()
+        {
+            foreach (TransactionModel transaction in App.TransactionRepo.GetAll())
+            {
+                TransactionsList.Add(transaction);
+            }
+        }
 
         // Properties
 
         private INavigation Navigation { get => Application.Current.MainPage.Navigation; }
 
-        public UserInfo UserInfo { get; set; }
+        public string PublicKey { get; set; } = TemporarilyUserData.PublicKey;
 
-        public CreateWallet Wallet { get; set; }
+        public string PrivateKey { get; set; } = TemporarilyUserData.PrivateKey;
 
-        public string MainPubKey { get; set; }
+        public decimal Balance { get; set; } = Convert.ToDecimal(TemporarilyUserData.Balance);
 
-        public string MainPrivKey { get; set; }
+        public double RubleToBTC { get => Settings.RubToBTC; }
 
-        public Dictionary<string, string> Keys { get; set; }
-
-        public ObservableCollection<string> PublicKeys { get; set; } = new ObservableCollection<string>();
-
-        public ObservableCollection<Address> Addresses { get; set; } = new ObservableCollection<Address>();
-
-        public decimal Balance { get; set; }
-
-        public string CoinType { get; set; }
+        public string CoinType { get; set; } = Settings.CoinType;
 
         //Transactions
 
+        public ObservableCollection<TransactionModel> TransactionsList = new ObservableCollection<TransactionModel>();
+
         public bool HasTransactions { get; set; } = false;
 
-        public int TransactionsCount { get; set; }
-
-        public List<decimal> AmountOfTransactions { get; set; }
-
-        public ObservableCollection<Transaction> Transactions { get; set; } = new ObservableCollection<Transaction>();
-
-        public List<string> TransactionsType { get; set; }
-
-        public List<string> TransactionDateTime { get; set; }
-
-        public List<string> TransactionsHash { get; set; }
+        public int TransactionsCount { get; set; } = TemporarilyUserData.TransactionsCount;
 
 
         // Methods
-
         public ImageSource GetQRKey(string UserPubKey)
         {
             byte[] keyQRCodeBytes = QRCodeKey.GenerateQRKey(UserPubKey);
 
             return ImageSource.FromStream(() => new MemoryStream(keyQRCodeBytes));
         }
+
+        public List<TransactionModel> GetAllTransaction() => App.TransactionRepo.GetAll();
 
         public decimal GetBalance(MoneyUnit moneyUnit, string userPubKey)
         {
@@ -79,41 +71,31 @@ namespace BitcoinWalletApp.ViewModels
         {
             return await Task.Run(() =>
             {
-                foreach (Transaction transaction in Transactions)
+                if (HasTransactions)
                 {
-                    if (CoinType == "Sat")
+                    
+                    foreach (TransactionModel transaction in TransactionsList)
                     {
-                        string amountOfTransaction;
-                        CommaInsert((Convert.ToDouble(transaction.DecimalAmountOfTransaction) * 100000).ToString(), out amountOfTransaction);
+                        transaction.StringAmount.Replace($" {CoinType}", "");
+                        if (CoinType == "Sat")
+                        {
+                            string amountOfTransaction = (transaction.Amount * 100000).ToString().Replace(",", "");
+                            string amount = String.Empty;
+                            CommaInsert(amountOfTransaction, out amount);
 
-                        transaction.AmountOfTransaction = amountOfTransaction + " sat";
-                    }
-                    else if (CoinType == "mBTC")
-                    {
-                        transaction.AmountOfTransaction = Math.Round(transaction.DecimalAmountOfTransaction * 1000, 2).ToString() + " mBTC";
-                    }
-                    else if (CoinType == "BTC")
-                    {
-                        transaction.AmountOfTransaction = transaction.DecimalAmountOfTransaction + " BTC";
+                            transaction.StringAmount = amount + " sat";
+                        }
+                        else if (CoinType == "mBTC")
+                        {
+                            transaction.StringAmount = Math.Round(transaction.Amount * 1000, 2).ToString() + " mBTC";
+                        }
+                        else if (CoinType == "BTC")
+                        {
+                            transaction.StringAmount = transaction.Amount.ToString() + " BTC";
+                        }
                     }
                 }
-
-                foreach (Address address in Addresses)
-                {
-                    if (CoinType == "Sat")
-                    {
-                        address.PublicKeyBalance = (address.DecimalBalance * 100000).ToString() + " sat";
-                    }
-                    else if (CoinType == "mBTC")
-                    {
-                        address.PublicKeyBalance = (address.DecimalBalance * 1000).ToString() + " mBTC";
-                    }
-                    else if (CoinType == "BTC")
-                    {
-                        address.PublicKeyBalance = address.DecimalBalance + " BTC";
-                    }
-                }
-
+                
                 return "";
             });
         }
@@ -124,34 +106,32 @@ namespace BitcoinWalletApp.ViewModels
 
             if (!String.IsNullOrEmpty(stringToChange))
             {
-                changedString = stringToChange.Replace(",", "");
+                changedString = stringToChange.Replace(" ", "");
+                int stringLength = changedString.Length;
 
-                if (changedString.Length == 4)
+                switch (stringLength)
                 {
-                    changedString = changedString.Insert(1, ",");
-                }
-                else if (changedString.Length == 5)
-                {
-                    changedString = changedString.Insert(2, ",");
-                }
-                else if (changedString.Length == 6)
-                {
-                    changedString = changedString.Insert(3, ",");
-                }
-                else if (changedString.Length == 7)
-                {
-                    changedString = changedString.Insert(1, ",");
-                    changedString = changedString.Insert(5, ",");
-                }
-                else if (changedString.Length == 8)
-                {
-                    changedString = changedString.Insert(2, ",");
-                    changedString = changedString.Insert(6, ",");
-                }
-                else if (changedString.Length == 9)
-                {
-                    changedString = changedString.Insert(3, ",");
-                    changedString = changedString.Insert(7, ",");
+                    case 4:
+                        changedString = changedString.Insert(1, " ");
+                        break;
+                    case 5:
+                        changedString = changedString.Insert(2, " ");
+                        break;
+                    case 6:
+                        changedString = changedString.Insert(3, " ");
+                        break;
+                    case 7:
+                        changedString = changedString.Insert(1, " ");
+                        changedString = changedString.Insert(5, " ");
+                        break;
+                    case 8:
+                        changedString = changedString.Insert(2, " ");
+                        changedString = changedString.Insert(6, " ");
+                        break;
+                    case 9:
+                        changedString = changedString.Insert(3, " ");
+                        changedString = changedString.Insert(7, " ");
+                        break;
                 }
             }
         }

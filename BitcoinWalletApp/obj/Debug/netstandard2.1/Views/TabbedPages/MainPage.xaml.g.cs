@@ -41,10 +41,10 @@ namespace BitcoinWalletApp.Views.TabbedPages {
         private global::Xamarin.Forms.Label UserBalance;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button MyAddresses;
+        private global::Xamarin.Forms.StackLayout UserRecentTransactions;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.StackLayout UserRecentTransactions;
+        private global::Xamarin.Forms.StackLayout UserRecentTransactionWrapper;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView UserRecentTransaction;
@@ -60,8 +60,8 @@ namespace BitcoinWalletApp.Views.TabbedPages {
             UserInfo__StateOfWallet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "UserInfo__StateOfWallet");
             UserPubKey = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "UserPubKey");
             UserBalance = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "UserBalance");
-            MyAddresses = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "MyAddresses");
             UserRecentTransactions = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "UserRecentTransactions");
+            UserRecentTransactionWrapper = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "UserRecentTransactionWrapper");
             UserRecentTransaction = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "UserRecentTransaction");
         }
     }

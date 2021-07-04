@@ -9,7 +9,9 @@
 		<AutoUnifyAssemblyReferences>true</AutoUnifyAssemblyReferences>
 	</PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Info.Blockchain.API.Standart" Version="1.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />
     <PackageReference Include="NBitcoin" Version="5.0.81" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
@@ -17,6 +19,7 @@
     <PackageReference Include="QRCoder" Version="1.4.1" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.11" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.1.0.67" />
     <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
@@ -24,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
@@ -47,19 +49,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Popups\SuccessfullTransaction_AddressesBook_Popup.xaml.cs">
+      <DependentUpon>SuccessfullTransaction_AddressesBook_Popup.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Popups\CopyPopup.xaml.cs">
       <DependentUpon>CopyPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popups\FailureTransaction_Popup.xaml.cs">
+      <DependentUpon>FailureTransaction_Popup.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\MyAddresses.xaml">
+    <EmbeddedResource Update="Views\AddressesBook.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ParentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\AddressDetails_Popup.xaml">
+    <EmbeddedResource Update="Views\Popups\SuccessfullTransaction_AddressesBook_Popup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Popups\DownloadQRImagePopup.xaml">
@@ -69,6 +77,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Popups\TransactionDetails_Popup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popups\FailureTransaction_Popup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TabbedPages\ChangePage.xaml">

@@ -1,28 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BitcoinWalletApp.ViewModels"
              x:Class="BitcoinWalletApp.Views.TabbedPages.SendPage"
              BackgroundColor="#003F63">
-    <ContentPage.Content>
-        <StackLayout >
-            <ImageButton Source="addressesbook.png" BackgroundColor="#003F63" HorizontalOptions="End"  Margin="9"/>
+    <StackLayout>
+        <StackLayout HeightRequest="48">
+            <ImageButton Source="addressesbook.xml" BackgroundColor="#003F63" HorizontalOptions="End"  Margin="9" Clicked="AddressesBook_Clicked"/>
+        </StackLayout>
             <Frame x:Name="MainFrame" BackgroundColor="#fff" CornerRadius="30">
                 <StackLayout>
                     <StackLayout>
-                        <Picker x:Name="AddressPicker"  
-                            Title="Выберите ваш адрес" TitleColor="#000" FontAttributes="Bold" TextColor="#000"/>
                         <StackLayout >
                             <Entry Placeholder="Адрес получателя" Style="{StaticResource entry}" x:Name="Receiver" FontSize="18"/>
-                            <Entry Keyboard="Numeric" Placeholder="0,00 sat" x:Name="AmountToSend" PlaceholderColor="#000" Style="{StaticResource entry}" ClearButtonVisibility="WhileEditing"
-                               Text="{Binding SumToSend}"
-                               MaxLength="11"
-                               TextChanged="AmountToSend_TextChanged"
-                                   />
-                        </StackLayout>
-                        <Button Text="Отправить" Style="{StaticResource button}" Clicked="Button_SendCoins" VerticalOptions="CenterAndExpand" />
+                            <FlexLayout JustifyContent="SpaceBetween">
+                                <Entry Keyboard="Numeric" Placeholder="0,00 sat" x:Name="AmountToSend" PlaceholderColor="#000" Style="{StaticResource entry}" 
+                                    ClearButtonVisibility="WhileEditing"
+                                       Text="sat| "
+                                    WidthRequest="{Binding HalfDisplayWidth}"
+                                    TextChanged="AmountToSend_TextChanged"
+                                    MaxLength="16"
+                                     />
+                            <Entry Style="{StaticResource entry}" WidthRequest="{Binding FourDisplayWidth}" x:Name="ConvertedToCurrency" Text="₽| " MaxLength="16" InputTransparent="True"/>
+                            </FlexLayout>
+                    </StackLayout>
+                        <Button Text="Отправить" Style="{StaticResource button}" Clicked="Button_SendCoins" VerticalOptions="CenterAndExpand" x:Name="SendButton"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
         </StackLayout>
-    </ContentPage.Content>
 </ContentPage>
